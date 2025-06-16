@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  color: #0e1c3f;
+}
+
+.topo {
+  background-color: #192a56;
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 5px solid #e01c25;
+}
+
+.topo img {
+  max-height: 60px;
+}
+
+.titulo {
+  text-align: center;
+  margin: 40px 600px 20px;
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #192a56;
+  text-shadow: 1px 1px 1px #aaa;
+  border-bottom: 4px solid #e01c25;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.etapas {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px auto;
+  padding: 0 30px;
+  flex-wrap: wrap;
+}
+
+.etapa {
+  flex: 1 1 200px;
+  max-width: 250px;
+  text-align: center;
+  padding: 20px;
+  border-left: 4px solid #e01c25;
+}
+
+.etapa:first-child {
+  border-left: none;
+}
+
+.etapa img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.etapa h2 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #0e1c3f;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.etapa p {
+  font-size: 14px;
+  color: #444;
+}
