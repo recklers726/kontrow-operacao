@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  color: #192a56;
+}
+
+.topo {
+  background-color: #192a56;
+  padding: 20px 0;
+  border-bottom: 5px solid #e01c25;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.logo-com-texto {
+  position: relative;
+  display: inline-block;
+}
+
+.logo-texto {
+  position: absolute;
+  top: 55%; /* coloca abaixo da imagem */
+  left: 77%; /* ajusta horizontalmente mais à direita */
+  transform: translateX(-50%);
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 5px;
+  white-space: nowrap;
+}
+
+.logo {
+  max-height: 60px;
+}
+
+
+/* Engrenagens com rotação animada */
+.engr1 {
+  max-height: 35px;
+  margin-top: 30px;
+  margin-left: -15px;
+  animation: girar 3s linear infinite;
+}
+
+.engr2 {
+  max-height: 45px;
+  margin-top: -12px;
+  margin-left: -19px;
+  animation: girar-reverso 3s linear infinite;
+}
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes girar-reverso {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.titulo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0 20px;
+}
+
+.titulo {
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #192a56;
+  text-shadow: 1px 1px 1px #aaa;
+  border-bottom: 4px solid #e01c25;
+  display: inline-block;
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+.etapas {
+  display: flex;
+  justify-content: center;
+  gap: 0px;
+  margin: 40px auto;
+  padding: 0 30px;
+  flex-wrap: wrap;
+}
+
+.etapa {
+  flex: 1 1 200px;
+  max-width: 250px;
+  text-align: center;
+  padding: 20px;
+  border-left: 4px solid #e01c25;
+}
+
+.etapa:first-child {
+  border-left: none;
+}
+
+.etapa img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 10px;
+}
+
+.etapa h2 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #192a56;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.etapa p {
+  font-size: 14px;
+  color: #192a56;
+}
