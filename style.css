@@ -5,6 +5,10 @@
   font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'font/dronerangerpro_bold.otf', sans-serif;
@@ -129,7 +133,8 @@ body {
 }
 
 .etapa h2 {
-  font-size: 16px;
+  font-size: 18px;
+  font-family: "fonteKontrow";
   font-weight: bold;
   color: #192a56;
   margin-bottom: 10px;
@@ -137,18 +142,30 @@ body {
 }
 
 .etapa p {
-  font-size: 14px;
+  font-size: 15px;
   color: #192a56;
+}
+
+.botao {
+  position: absolute;
+  opacity: 0;
+  background-color: #e01c25;
+  color: white;
+  margin-left: -10%;
+  padding: 120px 115px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
 }
 
 .passo1 {
   font-size: 20px;
+  margin-top: 30%;
   font-family: 'fonteKontrow';
   text-align: center;
   color: #192a56;
 }
 .passo1::first-letter {
-
   color: #e01c25;
 }
 
