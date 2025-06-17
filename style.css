@@ -1,8 +1,15 @@
+@font-face {
+  font-family: 'fonteKontrow';
+  src: url('font/dronerangerpro_bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'font/dronerangerpro_bold.otf', sans-serif;
   background-color: #fff;
-  color: #192a56;
+  color: #561922;
 }
 
 .topo {
@@ -25,12 +32,13 @@ body {
 
 .logo-texto {
   position: absolute;
-  top: 55%; /* coloca abaixo da imagem */
-  left: 77%; /* ajusta horizontalmente mais à direita */
+  font-family: 'fonteKontrow', sans-serif;
+  top: 61%; /* coloca abaixo da imagem */
+  left: 78%; /* ajusta horizontalmente mais à direita */
   transform: translateX(-50%);
   color: white;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 18px;
   margin-top: 5px;
   white-space: nowrap;
 }
@@ -50,8 +58,8 @@ body {
 
 .engr2 {
   max-height: 45px;
-  margin-top: -12px;
-  margin-left: -19px;
+  margin-top: -35px;
+  margin-left: -30px;
   animation: girar-reverso 3s linear infinite;
 }
 
@@ -81,7 +89,8 @@ body {
 }
 
 .titulo {
-  font-size: 26px;
+  font-size: 30px;
+  font-family: 'fonteKontrow';
   font-weight: bold;
   text-transform: uppercase;
   color: #192a56;
@@ -130,4 +139,101 @@ body {
 .etapa p {
   font-size: 14px;
   color: #192a56;
+}
+
+.passo1 {
+  font-size: 20px;
+  font-family: 'fonteKontrow';
+  text-align: center;
+  color: #192a56;
+}
+.passo1::first-letter {
+
+  color: #e01c25;
+}
+
+.softwares {
+  font-size: 16px;
+  color: #192a56;
+  margin-bottom: 15px;
+}
+
+.bloco-instrucoes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Agora apenas 2 por linha */
+  gap: 10px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.passo {
+  background-color: #f8f8f8;
+  padding: px 30px;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  font-size: 17px; /* Texto maior */
+  line-height: 1.6;
+}
+
+.passo span {
+  color: #e01c25;
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+.passo img {
+  margin-top: 15px;
+  max-width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+
+.instrucoes {
+  background-color: #f5f6f8; /* cinza claro que preenche toda a largura */
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.instrucoes .container {
+  max-width: 900px; /* controla a largura máxima para o conteúdo */
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  position: relative;
+}
+
+.coluna {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+  color: #192a56;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 0 10px;
+}
+
+.coluna span {
+  color: #d33b2e; /* vermelho para o número */
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.barra-separadora {
+  width: 4px;
+  background-color: #d33b2e; /* vermelho */
+  border-radius: 2px;
+  height: 100%;
+  align-self: stretch;
 }
