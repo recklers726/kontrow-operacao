@@ -16,6 +16,12 @@ html {
    scroll-behavior: smooth;
 }
 
+.zoom-ativo {
+  transform: scale(1.50);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 body {
   margin: 0;
   font-family: 'font/dronerangerpro_bold.otf', sans-serif;
@@ -25,8 +31,8 @@ body {
 
 .topo {
   background-color: #192a56;
-  padding: 20px 0;
-  border-bottom: 5px solid #e01c25;
+  padding: 8px 0;
+  border-bottom: 5px solid red;
 }
 
 .logo-container {
@@ -106,9 +112,9 @@ body {
   text-transform: uppercase;
   color: #192a56;
   text-shadow: 1px 1px 1px #aaa;
-  border-bottom: 4px solid #e01c25;
+  border-bottom: 4px solid red;
   display: inline-block;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
   margin: 0;
 }
 
@@ -117,17 +123,25 @@ body {
   justify-content: center;
   gap: 0px;
   margin: 40px auto;
-  padding: 0 30px;
+  padding: 0px 0px;
   flex-wrap: wrap;
 }
 
 .etapa {
+  position: relative;
   flex: 1 1 200px;
+  overflow: hidden;
   max-width: 250px;
   font-family: 'openSans';
   text-align: center;
   padding: 20px;
-  border-left: 4px solid #e01c25;
+  border-left: 4px solid red;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-etapa {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
 .etapa:first-child {
@@ -154,28 +168,19 @@ body {
   color: #192a56;
 }
 
-.botao {
-  position: absolute;
-  opacity: 0;
-  background-color: #e01c25;
-  color: white;
-  margin-left: -10%;
-  padding: 120px 115px;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-}
-
-.botao2 {
+.botao2, .botao {
   position: absolute;
   background-color: #e01c25;
-  opacity: 0;
+  opacity: 0%;
   color: rgb(255, 255, 255);
-  margin-left: -6.10%;
-  padding: 115px 102px;
+  margin-left: -37%;
+  bottom: 1.25%;
+  padding: 115px 100px;
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
+  cursor: pointer;
+  z-index: 10;
 }
 
 .passo1 {
@@ -263,7 +268,17 @@ body {
   font-family: 'openSans';
 }
 
-.linha-vermelha {
+.linha-vermelha-top {
+  position: relative;
+  width: 60%;
+  height: 4px;
+  background-color: red;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  border-radius: 2px;
+  margin: 0 auto;
+}
+
+.linha-vermelha-bottom{
   width: 30%;
   height: 4px;
   background-color: red;
@@ -293,7 +308,7 @@ body {
 
 .instrucoes {
   background-color: #f5f6f8; /* cinza claro que preenche toda a largura */
-  padding: 40px 20px;
+  padding: px 20px;
   width: 100%;
 }
 
@@ -303,8 +318,30 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 40px;
+  gap: 35px;
   position: relative;
+}
+
+.passo-1_1 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.passo-1_2 {
+  font-size: 18;
+  margin-left: 13px;
+  margin-top: 15px;
+  margin-bottom: 38px;
+
+}
+
+.passo-1_3 {
+ margin-bottom: 60px;
+}
+
+.passo-1_4 {
+  font-size: 18;
+  margin-left: 13px;
 }
 
 .coluna {
@@ -340,6 +377,21 @@ body {
   display: flex;
   justify-content: center;
   margin-bottom: 100px;
+}
+
+#video4 {
+  margin-top: 29px;
+}
+#video6 {
+  margin-top: 29px;
+}
+
+#video7 {
+  margin-top: 108px;
+}
+
+#video9 {
+  margin-top: 0px;
 }
 
 .video-box video {

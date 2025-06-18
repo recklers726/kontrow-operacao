@@ -27,7 +27,7 @@
     <section class="etapas">
       <div class="etapa">
         <a href="#passo1" class="botao">ir ao passo 1</a>
-        <img src="img/administracao.png" alt="Produção">
+        <img src="img/icons8-configuração-80.png" alt="Produção">
         <h2>1. PRODUÇÃO DE EQUIPAMENTOS</h2>
         <p>Comissionamento e produção de equipamentos para envio de cliente instalação/estoque/visita técnica</p>
       </div>
@@ -46,7 +46,22 @@
         <img src="img/entrega.png" alt="Envio">
         <h2>4. PREPARAÇÃO PARA ENVIO CLIENTE</h2>
         <p>Separação de material de acordo com o atendimento necessário</p>
+      </div>      
+    </section>
+    <div class="linha-vermelha-top"></div>
+    <section class="etapas">
+      <div class="etapa">
+        <a href="#passo1" class="botao">ir ao passo 1</a>
+        <img src="img/icons8-fatura-100.png" alt="Produção">
+        <h2>5. Emissão Nota fiscal</h2>
+        <p>Emissão de NF para envio de material ao cliente</p>
       </div>
+      <div class="etapa">
+        <a href="#passo2" class="botao2">ir ao passo 2</a>
+        <img src="img/icons8-refund-100-invertido-contorno.png"Reconfiguração">
+        <h2>6. Retorno de material</h2>
+        <p>Entrada de estoque e remoção de equipamentos da conta do cliente</p>
+          </div>    
     </section>
 <div class="bloco-producao">
   <div id="passo1" class="passo1">1. PRODUÇÃO DE EQUIPAMENTOS</div>
@@ -56,25 +71,36 @@
     <p class="softwares">Datalbus / Local Factory / MoviDesk</p>
   </div>
 
-  <div class="linha-vermelha"></div>
+  <div class="linha-vermelha-bottom"></div>
 </div>
 <section class="instrucoes">
   <div class="container">
     <div class="coluna">
-      <p><span>1.1</span> Selecionar KDB na prateleira para iniciar a configuração. de acordo com o tipo de contrato do cliente, venda ou comodato. (Venda .enviar apenas equipamentos novos e comodato em boas condições de uso).</p>
-      <p><span>1.2</span> Anote o número de ID que está na etiqueta da anatel na parte traseira da KDB.</p>
+      <div class="passo passo-1_1">
+        <p><span>1.1</span> Selecionar KDB na prateleira para iniciar a configuração, de acordo com o tipo de contrato do cliente, venda ou comodato. (Venda: enviar apenas equipamentos novos. Comodato: em boas condições de uso).</p>
+      </div>
+      <div class="passo passo-1_3">
+        <p><span>1.3</span> Coloque no slot de chip da KDB, um chip ativo da mesma operadora que está configurada a KDB no Datalbus. (Analisar qual a melhor operadora para a região do cliente)</p>
+      </div>
     </div>
+
     <div class="barra-separadora"></div>
+
     <div class="coluna">
-      <p><span>1.3</span> Coloque no slot de chip da KDB, um chip ativo da mesma operadora que está configurada a KDB no Datalbus. (Analisar qual a melhor operadora para região do cliente)</p>
-      <p><span>1.4</span> conecte KDB na bancada de configuração.</p>
+      <div class="passo passo-1_2">
+        <p><span>1.2</span> Anote o número de ID que está na etiqueta da Anatel na parte traseira da KDB.</p>
+      </div>
+      <div class="passo passo-1_4">
+        <p><span>1.4</span> Conecte a KDB na bancada de configuração.</p>
+      </div>
+    </div>
   </div>
 </section>
 <section class="instrucoes">
   <div class="container">
   <div class="coluna">
     <p><span>1.5</span>No Datalbus no canto superior esquerdo clicar em “Administração” e selecionar a aba “Equipamentos”.</p>
-    <div class="video-box">
+    <div class="video-box" id="video1">
       <video controls>
         <source src="videos/1.4.mp4" type="video/mp4">
       </video>
@@ -83,7 +109,7 @@
 
   <div class="barra-separadora"></div>
 
-  <div class="coluna">
+  <div class="coluna" id="video2">
     <p><span>1.6</span>Na barra de pesquisa “N° Equip.” pesquise no sistema o número de ID da KDB e verifique o sinal GSM no Datalbus, conforme a operadora selecionada.</p>
     <div class="video-box">
       <video controls>
@@ -94,7 +120,7 @@
   </div>
 </div>
   <div class="container">
-  <div class="coluna">
+  <div class="coluna" id="video3">
     <p><span>1.7</span>Se o status do equipamento for “Inativo” ou “Em Produção” Selecione a KDB que deseja configurar, clique em “ações” depois clique em “Entrada Estoque”. Se o equipamento estiver com status “Disponível” proceder de acordo com item “2. Reconfiguração de equipamentos”</p>
     <div class="video-box">
       <video controls>
@@ -104,7 +130,7 @@
   </div>
     <div class="barra-separadora"></div>
 
-  <div class="coluna">
+  <div class="coluna" id="video4">
     <p><span>1.8</span>Confirme se o FW da KDB está em sua última versão de acordo com a informação “versão atual firmware” No canto superior direito da aba de equipamentos conferir se o FW está em sua última versão</p>
     <div class="video-box">
       <video controls>
@@ -115,7 +141,7 @@
   </div> 
 </div>
 </div>
-  <div class="container">
+  <div class="container" id="video5">
   <div class="coluna">
     <p><span>1.9</span>1.9   Selecione KDB clique em “Ações” e logo após clique em “Enviar Perfil”, selecione o perfil desejado de acordo com a configuração passada pelo suporte no ticket de instalação, Clique em prosseguir e aguarde o equipamento comissionar”</p>
     <div class="video-box">
@@ -126,7 +152,7 @@
   </div>
     <div class="barra-separadora"></div>
 
-  <div class="coluna">
+  <div class="coluna" id="video6">
     <p><span>1.10</span>Após finalizar a configuração, selecione o equipamento. No canto superior esquerdo clique no botão “alocar p/ cliente”, selecione o cliente desejado e clique em prosseguir;</p>
     <div class="video-box">
       <video controls>
@@ -137,7 +163,7 @@
   </div> 
 </div>
   <div class="container">
-  <div class="coluna">
+  <div class="coluna" id="video7">
     <p><span>1.11</span>No canto superior direito clique no ícone de usuário, depois clique em “Trocar de Cliente”, e entre na conta do cliente desejado”</p>
     <div class="video-box">
       <video controls>
@@ -147,7 +173,7 @@
   </div>
     <div class="barra-separadora"></div>
 
-  <div class="coluna">
+  <div class="coluna" id="video8">
     <p><span>1.12</span>No canto esquerdo, coloque o mouse sobre o ícone da aba de “Operação”, depois clique em “Equipamentos” e em “Nº Equip” procure pelo ID que está sendo configurado, aguarde o status mudar de “Aguardando comunicação” para “Disponivel p/ instalação”, e com o botão de pós chave da bancada de configuração desligado aguarde o carregamento do script (Scheduling Commit for Script Mirror Zone Command Scheduled by Server);</p>
     <div class="video-box">
       <video controls>
@@ -157,7 +183,7 @@
     </div>
   </div> 
 </div>
-  <div class="container">
+  <div class="container" id="video9">
   <div class="coluna">
     <p><span>1.13</span>Retorne a aba de “Operação”, clique em “Identificadores”, no canto superior esquerdo clique em “Atualizar/Criar Lista” e para finalizar clicar em “Enviar lista x para equipamentos””</p>
     <div class="video-box">
@@ -168,7 +194,7 @@
   </div>
     <div class="barra-separadora"></div>
 
-  <div class="coluna">
+  <div class="coluna" id="video10">
     <p><span>1.14</span>Novamente abra a aba de “operação” volte para equipamentos e aguarde o equipamento que foi configurado carregar o comando de lista de motorista e commit (Load_Graylist_autosync e Scheduling Commit for Graylist Mirror Zone Command Scheduled by Server)</p>
     <div class="video-box">
       <video controls>
@@ -192,5 +218,22 @@
 </div>
 <section>
  </main>
+ <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const botoes = document.querySelectorAll('.botao, .botao2');
+
+    botoes.forEach(botao => {
+      const etapa = botao.closest('.etapa');
+
+      botao.addEventListener('mouseenter', () => {
+        etapa.classList.add('hover-etapa');
+      });
+
+      botao.addEventListener('mouseleave', () => {
+        etapa.classList.remove('hover-etapa');
+      });
+    });
+  });
+</script>
 </body>
 </html>
