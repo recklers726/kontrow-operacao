@@ -5,8 +5,15 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'OpenSans';
+  src: url('font/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
-  scroll-behavior: smooth;
+   scroll-behavior: smooth;
 }
 
 body {
@@ -38,31 +45,31 @@ body {
   position: absolute;
   font-family: 'fonteKontrow', sans-serif;
   top: 61%; /* coloca abaixo da imagem */
-  left: 78%; /* ajusta horizontalmente mais à direita */
+  left: 79%; /* ajusta horizontalmente mais à direita */
   transform: translateX(-50%);
   color: white;
   font-weight: bold;
-  font-size: 18px;
-  margin-top: 5px;
+  font-size: 25px;
+  margin-top: 8px;
   white-space: nowrap;
 }
 
 .logo {
-  max-height: 60px;
+  max-height: 85px;
 }
 
 
 /* Engrenagens com rotação animada */
 .engr1 {
-  max-height: 35px;
-  margin-top: 30px;
-  margin-left: -15px;
+  max-height: 38px;
+  margin-top: 45px;
+  margin-left: -5px;
   animation: girar 3s linear infinite;
 }
 
 .engr2 {
-  max-height: 45px;
-  margin-top: -35px;
+  max-height: 50px;
+  margin-top: -25px;
   margin-left: -30px;
   animation: girar-reverso 3s linear infinite;
 }
@@ -93,7 +100,7 @@ body {
 }
 
 .titulo {
-  font-size: 30px;
+  font-size: 40px;
   font-family: 'fonteKontrow';
   font-weight: bold;
   text-transform: uppercase;
@@ -117,6 +124,7 @@ body {
 .etapa {
   flex: 1 1 200px;
   max-width: 250px;
+  font-family: 'openSans';
   text-align: center;
   padding: 20px;
   border-left: 4px solid #e01c25;
@@ -158,10 +166,24 @@ body {
   font-weight: bold;
 }
 
+.botao2 {
+  position: absolute;
+  background-color: #e01c25;
+  opacity: 0;
+  color: rgb(255, 255, 255);
+  margin-left: -6.10%;
+  padding: 115px 102px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
 .passo1 {
-  font-size: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: -25px;
   margin-top: 30%;
-  font-family: 'fonteKontrow';
+  font-family: 'OpenSans';
   text-align: center;
   color: #192a56;
 }
@@ -193,9 +215,65 @@ body {
   font-size: 17px; /* Texto maior */
   line-height: 1.6;
 }
+.bloco-producao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  gap: 5px; /* espaçamento entre os elementos */
+  margin-bottom: 40px;
+}
+
+.passo1 {
+  font-size: 28px;
+  font-family: 'openSans';
+  font-weight: bold;
+  color: #192a56;
+  margin-bottom: 10px;
+}
+
+.passo2 {
+  font-size: 28px;
+  font-family: 'openSans';
+  font-weight: bold;
+  color: #192a56;
+  margin-bottom: 10px;
+}
+
+.conteudo-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px; /* define o espaço entre subtítulo e softwares */
+}
+
+.subtitulo {
+  font-family: 'openSans';
+  font-size: 16px;
+  font-weight: bold;
+  color: #0e1c3f;
+  margin-bottom: -15px;
+}
+
+.softwares {
+  font-size: 15px;
+  color: #0e1c3f;
+  margin-bottom: -5px;
+  font-family: 'openSans';
+}
+
+.linha-vermelha {
+  width: 30%;
+  height: 4px;
+  background-color: red;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  border-radius: 2px;
+}
+
 
 .passo span {
-  color: #e01c25;
+  color: red;
   font-weight: bold;
   margin-right: 4px;
 }
@@ -209,7 +287,7 @@ body {
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'openSans';
   background: #fff;
 }
 
@@ -220,7 +298,7 @@ body {
 }
 
 .instrucoes .container {
-  max-width: 900px; /* controla a largura máxima para o conteúdo */
+  max-width: 1400px; /* controla a largura máxima para o conteúdo */
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -233,24 +311,41 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 10px;
   text-align: center;
   color: #192a56;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   padding: 0 10px;
 }
 
 .coluna span {
-  color: #d33b2e; /* vermelho para o número */
+  color: red; 
   font-weight: 600;
   margin-right: 5px;
 }
 
 .barra-separadora {
+  position: absolute;
+  margin-top: 30px;
   width: 4px;
-  background-color: #d33b2e; /* vermelho */
+  background-color: red;
   border-radius: 2px;
-  height: 100%;
+  height: 80%;
   align-self: stretch;
+}
+
+.video-box {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.video-box video {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
