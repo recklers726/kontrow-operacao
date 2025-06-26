@@ -38,11 +38,13 @@
         <p>Mudar a configuração de um equipamento que já está na conta de um cliente</p>
       </div>
       <div class="etapa">
+        <a href="#passo3" class="botao3">ir ao passo 3</a>
         <img src="img/teste-de-unidade.png" alt="Teste">
         <h2>3. TESTE DE EQUIPAMENTO</h2>
         <p>Teste de bloqueio spoke/KDB para avaliação técnica</p>
       </div>
       <div class="etapa">
+        <a href="#passo4" class="botao4">ir ao passo 3</a>
         <img src="img/entrega.png" alt="Envio">
         <h2>4. PREPARAÇÃO PARA ENVIO CLIENTE</h2>
         <p>Separação de material de acordo com o atendimento necessário</p>
@@ -51,17 +53,17 @@
     <div class="linha-vermelha-top"></div>
     <section class="etapas">
       <div class="etapa">
-        <a href="#passo1" class="botao">ir ao passo 1</a>
+        <a href="#passo5" class="botao5">ir ao passo 1</a>
         <img src="img/icons8-fatura-100.png" alt="Produção">
         <h2>5. Emissão Nota fiscal</h2>
         <p>Emissão de NF para envio de material ao cliente</p>
       </div>
       <div class="etapa">
-        <a href="#passo2" class="botao2">ir ao passo 2</a>
+        <a href="#passo6" class="botao6">ir ao passo 2</a>
         <img src="img/icons8-refund-100-invertido-contorno.png"Reconfiguração">
         <h2>6. Retorno de material</h2>
         <p>Entrada de estoque e remoção de equipamentos da conta do cliente</p>
-          </div>    
+          </div>      
     </section>
 <div class="bloco-producao">
   <div id="passo1" class="passo1">1. PRODUÇÃO DE EQUIPAMENTOS</div>
@@ -143,7 +145,7 @@
 </div>
   <div class="container" id="video5">
   <div class="coluna">
-    <p><span>1.9</span>1.9   Selecione KDB clique em “Ações” e logo após clique em “Enviar Perfil”, selecione o perfil desejado de acordo com a configuração passada pelo suporte no ticket de instalação, Clique em prosseguir e aguarde o equipamento comissionar”</p>
+    <p><span>1.9</span>1.9  Selecione KDB clique em “Ações” e logo após clique em “Enviar Perfil”, selecione o perfil desejado de acordo com a configuração passada pelo suporte no ticket de instalação, Clique em prosseguir e aguarde o equipamento comissionar”</p>
     <div class="video-box">
       <video controls>
         <source src="videos/videos-1.0/1.8.mp4" type="video/mp4">
@@ -293,10 +295,70 @@
 </div>
  </main>
  </section>
+
+ <section>
+<div class="bloco-producao">
+  <div id="passo3" class="passo2">3. TESTE DE EQUIPAMENTOS</div>
+
+  <div class="conteudo-flex">
+    <p class="subtitulo"><strong>Hardwares necessários:</strong></p>
+    <p class="softwares">KDB (Configurada) / Spoke / Teste de bancada </p>
+  </div>
+
+  <div class="linha-vermelha-bottom"></div>
+</div>
+
+</section>
+
+<section class="instrucoes">
+  <div class="container">
+    <div class="coluna">
+      <div class="passo passo-1_1">
+        <p><span>3.1</span> Após conclusão de todos os processos do item 1 PRODUÇÃO DE EQUIPAMENTO, ligue a KDB e um SPOKE em um teste físico, e espere até que ambos deem boot (segundo led do SPOKE pare de piscar e apenas o primeiro fique aceso piscando lentamente).</p>
+      </div>
+      <div class="passo passo-1_3">
+        <p><span>3.2</span> Após ambos os equipamentos iniciarem, ligue o botão do pós chave, e aguarde que o SPOKE fique com os leds vermelhos.</p>
+      </div>
+    </div>
+
+    <div class="barra-separadora"></div>
+
+    <div class="coluna">
+      <div class="passo passo-1_2">
+        <p><span>3.3</span> Com um cartão válido que esteja configurado na conta do cliente encoste o cartão no SPOKE para que ele o leia (os leds devem piscar em verde e o SPOKE deve emitir uma confirmação sonora).</p>
+      </div>
+      <div class="passo passo-1_4">
+        <p><span>3.4</span> Em casos que a KBD esteja configurada como E5 ou E6 o SPOKE deve sempre ficar com os leds em verde variando na vertical, e no teste físico a luz de partida deve ser acionada enquanto os leds do SPOKE estiverem em verde.</p>
+      </div>
+    </div>
+  </div>
+
+    <div class="container">
+    <div class="coluna">
+      <div class="passo passo-1_1">
+        <p><span>3.5</span> Em casos que a KDB esteja configurada como E3 o teste deve funcionar como uma lógica invertida, quando a KDB for conectada ao teste e iniciar a luz de partida acenderá, o SPOKE ficará com os leds vermelhos variando na vertical, assim que for realizada a leitura do cartão, os leds irão ficar verdes e a luz de partida do teste irá se apagar</p>
+      </div>
+      <div class="passo passo-1_3">
+        <p><span>3.6</span> Qualquer outra variação no teste que não seja como descrito acima, é recomendado que seja revisado os passos 1.12 e 1.13 no item 1. PRODUÇÃO DE EQUIPAMENTOS.</p>
+      </div>
+    </div>
+
+    <div class="barra-separadora"></div>
+
+    <div class="coluna">
+      <div class="passo passo-1_2">
+        <p><span>3.7</span> Se todos os passos foram feitos dentro do que está descrito e mesmo assim o funcionamento apresenta diferença, pode existir algum problema físico na KDB ou SPOKE</p>
+      </div>
+      <div class="passo passo-1_4">
+        <p><span>3.8</span> Se tudo estiver OK, desligue o pós chave do teste físico e aguarde até que a luz de partida desligue e o SPOKE retorne aos leds vermelhos.</p>
+      </div>
+    </div>
+  </div>
+</section>
  
  <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const botoes = document.querySelectorAll('.botao, .botao2');
+    const botoes = document.querySelectorAll('.botao, .botao2, .botao3, .botao4, .botao5, .botao6');
 
     botoes.forEach(botao => {
       const etapa = botao.closest('.etapa');
@@ -311,5 +373,37 @@
     });
   });
 </script>
-</body>
+
+<button id="btn-topo" title="Voltar ao topo">↑</button>
+
+<script>
+  const btnTopo = document.getElementById("btn-topo");
+
+  // Mostrar o botão quando o usuário rolar a página
+  window.onscroll = function () {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      btnTopo.style.display = "block";
+    } else {
+      btnTopo.style.display = "none";
+    }
+  };
+
+  // Ao clicar no botão, rolar suavemente para o topo e aplicar a animação
+  btnTopo.addEventListener("click", () => {
+    // Adiciona classe de animação
+    btnTopo.classList.add("botao-animado");
+
+    // Rolagem suave para o topo
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+    // Remove a classe após a duração da animação
+    setTimeout(() => {
+      btnTopo.classList.remove("botao-animado");
+    }, 300); // deve coincidir com o tempo da animação CSS
+  });
+</script>
+</body class="fade-in">
 </html>
