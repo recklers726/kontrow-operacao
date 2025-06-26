@@ -18,13 +18,35 @@
   100% { transform: scale(1); }
 }
 
-.botao-animado {
-  animation: pulsar 0.3s ease;
+@keyframes fadeInBody {
+  to {
+    opacity: 1;
+  }
 }
 
-.fade-in {
-  opacity: 0;
-  animation: fadeInBody 1.2s ease-in-ou forwards;
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animar-entrada {
+  opacity: 0; /* inicia invisível */
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.animar-entrada.aparecer {
+  animation: fadeSlideUp 1s ease-out both;
+}
+
+.botao-animado {
+  animation: pulsar 0.5s ease;
 }
 
 
