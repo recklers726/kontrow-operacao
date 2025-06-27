@@ -65,7 +65,6 @@
         <p>Entrada de estoque e remoção de equipamentos da conta do cliente</p>
           </div>      
     </section>
-
 <div class="bloco-producao animar-entrada">
   <div id="passo1" class="passo1">1. PRODUÇÃO DE EQUIPAMENTOS</div>
 
@@ -212,6 +211,8 @@
 </section>
 <section>
 <div class="bloco-producao animar-entrada">
+  <div id="passo2" class="passo2"></div>
+
   <div id="passo2" class="passo2">2. RECONFIGURAÇÃO DE EQUIPAMENTOS</div>
 
   <div class="conteudo-flex">
@@ -300,6 +301,7 @@
  </section>
 
  <section>
+  <div id="passo3" class="passo2"></div>
 <div class="bloco-producao animar-entrada">
   <div id="passo3" class="passo2">3. TESTE DE EQUIPAMENTOS</div>
 
@@ -376,18 +378,21 @@
   });
 </script>
 
+<button id="btn-imprimir" onclick="window.print()">🖨️</button>
+
 <button id="btn-topo" title="Voltar ao topo">↑</button>
+
 
 <script>
   const btnTopo = document.getElementById("btn-topo");
+  const btnPrint = document.getElementById("btn-imprimir");
 
   // Mostrar o botão quando o usuário rolar a página
   window.onscroll = function () {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-      btnTopo.style.display = "block";
-    } else {
-      btnTopo.style.display = "none";
-    }
+    const scrollY = document.body.scrollTop || document.documentElement.scrollTop;
+
+        btnPrint.style.display = scrollY > 200 ? "block" : "none";
+         btnTopo.style.display = scrollY > 200 ? "block" : "none";
   };
 
   // Ao clicar no botão, rolar suavemente para o topo e aplicar a animação
@@ -408,20 +413,20 @@
   });
 </script>
 
+
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const elementos = document.querySelectorAll('.animar-entrada');
 
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('aparecer');
-        } else {
-          entry.target.classList.remove('aparecer');
+          observer.unobserve(entry.target); // para de observar após a animação
         }
       });
     }, {
-      threshold: 0.2 // quando 20% do elemento estiver visível
+      threshold: 0.5 // só ativa quando 50% do elemento estiver visível
     });
 
     elementos.forEach(el => observer.observe(el));
