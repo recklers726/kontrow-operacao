@@ -195,16 +195,15 @@ body {
 }
 
 .titulo {
-  font-size: 40px;
+  font-size: 47px;
   font-family: 'fonteKontrow';
   font-weight: bold;
   text-transform: uppercase;
   color: #192a56;
   text-shadow: 1px 1px 1px #aaa;
-  border-bottom: 4px solid red;
   display: inline-block;
   padding-bottom: 0px;
-  margin: 0;
+  margin-top: 2%;
 }
 
 .etapas {
@@ -272,6 +271,16 @@ body {
   z-index: 10;
 }
 
+.KDB {
+    font-size: 28px;
+  font-weight: bold;
+  margin-bottom: -25px;
+  margin-top: 30%;
+  font-family: 'OpenSans';
+  text-align: center;
+  color: #192a56;
+}
+
 .passo1 {
   font-size: 28px;
   font-weight: bold;
@@ -293,22 +302,49 @@ body {
 
 .bloco-instrucoes {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Agora apenas 2 por linha */
+  grid-template-columns: repeat(2, 1fr); /* Agora apenas 2S por linha */
   gap: 10px;
   justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+.passoIntrodução {
+  background-color: #ff040400;
+  padding: 0px 25px;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 14px; /* Texto maior */
+  line-height: 1.6;
+}
+
+.passoIntrodução span {
+  font-family: "fonteKontrow";
+  font-size: 35px;
+  color: red;
+  font-weight: bold;
+  margin-right: 4px;
+}
+
 .passo {
-  background-color: #f8f8f8;
+  background-color: #e8e3e300;
   padding: px 30px;
   border-radius: 8px;
   text-align: left;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
   font-size: 17px; /* Texto maior */
   line-height: 1.6;
 }
+
+.passoKDB {
+  font-family: "fonteKontrow";
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  margin-top: 1%;
+  text-align: center;
+  color: #192a56;
+}
+
 .bloco-producao {
   display: flex;
   flex-direction: column;
@@ -375,18 +411,19 @@ body {
   border-radius: 2px;
 }
 
+.linha-vermelha-bottomKDB{
+  width: 12%;
+  height: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  background-color: red;
+  border-radius: 2px;
+}
+
 
 .passo span {
   color: red;
   font-weight: bold;
   margin-right: 4px;
-}
-
-.passo img {
-  margin-top: 15px;
-  max-width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 6px;
 }
 
 body {
@@ -395,10 +432,26 @@ body {
   background: #fff;
 }
 
+.instrucoes-KDB {
+  background-color: #ffffff; /* cinza claro que preenche toda a largura */
+  padding: px 20px;
+  width: 100%;
+}
+
 .instrucoes {
   background-color: #f5f6f8; /* cinza claro que preenche toda a largura */
   padding: px 20px;
   width: 100%;
+}
+
+.instrucoes-KDB .container {
+  max-width: 1400px; /* controla a largura máxima para o conteúdo */
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 35px;
+  position: relative;
 }
 
 .instrucoes .container {
@@ -431,6 +484,28 @@ body {
 .passo-1_4 {
   font-size: 18;
   margin-left: 13px;
+}
+
+.coluna-KDB {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  color: #192a56;
+  font-size: 18px;
+  line-height: 1.5;
+  padding: 0 10px;
+}
+
+.container-KDB {
+  max-width: 1400px; /* controla a largura máxima para o conteúdo */
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 35px;
+  position: relative;
 }
 
 .coluna {
@@ -510,9 +585,8 @@ body {
   border-radius: 10px;
   font-size: 24px;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.3);
   transition: opacity 0.3s ease;
-
 }
 
 #btn-topo:hover {
