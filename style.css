@@ -203,7 +203,7 @@ body {
   text-shadow: 1px 1px 1px #aaa;
   display: inline-block;
   padding-bottom: 0px;
-  margin-top: 2%;
+  margin-top: 0%;
 }
 
 .etapas {
@@ -310,36 +310,101 @@ body {
 }
 
 .passoIntrodução {
-  background-color: #ff040400;
+  background-color: #d5d5d53b;
   padding: 0px 25px;
   border-radius: 8px;
   text-align: left;
-  font-size: 14px; /* Texto maior */
+  font-size: 15px; /* Texto maior */
   line-height: 1.6;
 }
 
-.passoIntrodução span {
-  font-family: "fonteKontrow";
-  font-size: 35px;
-  color: red;
-  font-weight: bold;
-  margin-right: 4px;
+.passoIntrodução-software {
+  background-color: #d5d5d53b;
+  padding: 37px 25px;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 15px; /* Texto maior */
+  line-height: 1.6;
+  a {
+    font-family: "fonteKontrow";
+    font-size: 35px;
+    color: #192a56;
+    text-decoration: underline;
+    text-decoration-color: red;
+   } 
+  a:hover {
+    color: red;
+  }}
+
+  .passoIntrodução { a{
+    color: #192a56;
+    text-decoration: underline;
+    text-decoration-color: red;
+  }
+  
+  a:hover {
+    color: red;
+  }
 }
 
+.passoIntrodução-hardware {
+  background-color: #d5d5d53b;
+  padding: 60px 25px;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 15px; /* Texto maior */
+  line-height: 1.6;
+  a {
+    font-family: "fonteKontrow";
+    font-size: 35px;
+    color: #192a56;
+    text-decoration: underline;
+    text-decoration-color: red;
+   } 
+  a:hover {
+    color: red;
+  }}
+
+  .passoIntrodução { a{
+    color: #192a56;
+    text-decoration: underline;
+    text-decoration-color: red;
+  }
+  
+  a:hover {
+    color: red;
+  }
+}
+
+.passoIntrodução {
+  span {
+  font-family: "fonteKontrow";
+  font-size: 35px;
+  font-weight: bold;
+  margin-right: 4px;
+  text-decoration: underline red;
+}}
+
 .passo {
-  background-color: #e8e3e300;
-  padding: px 30px;
+  background-color: #d5d5d53b;
+  padding: 20px 30px;
   border-radius: 8px;
   text-align: left;
   font-size: 17px; /* Texto maior */
   line-height: 1.6;
 }
-
+.fundoCinzaVideoBox {
+  background-color: #d5d5d53b;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 02 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
 .passoKDB {
   font-family: "fonteKontrow";
-  font-size: 28px;
+  font-size: 42px;
   font-weight: bold;
-  margin-bottom: 0px;
+  margin-bottom: 2%;
   margin-top: 1%;
   text-align: center;
   color: #192a56;
@@ -411,19 +476,61 @@ body {
   border-radius: 2px;
 }
 
-.linha-vermelha-bottomKDB{
-  width: 12%;
+.linha-vermelha-bottom-introdução-up{
+  width: 17%;
   height: 4px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
   background-color: red;
   border-radius: 2px;
+  margin-top: 2%;
+  margin-bottom: -0.2%;
 }
 
+.linha-vermelha-bottom-introdução-down{
+  width: 17%;
+  height: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  background-color: red;
+  border-radius: 2px;
+  margin-top: -2%;
+  margin-bottom: 5%;
+}
+
+.linha-vermelha-bottom-instrução{
+  width: 40%;
+  height: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  background-color: red;
+  margin-top: -3.2%;
+  border-radius: 2px;
+
+}
+
+.software {
+  font-family: "fonteKontrow";
+  font-size: 30px;
+}
+
+.hardware {
+  font-family: "fonteKontrow";
+  font-size: 30px;
+}
 
 .passo span {
   color: red;
   font-weight: bold;
   margin-right: 4px;
+}
+
+.linha-vermelha-bottom-software {
+  width: 25%;
+  height: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  background-color: red;
+  border-radius: 2px;
+  margin-left: 247px;
+  margin-top: -2%;
+  margin-bottom: 5%;
 }
 
 body {
@@ -433,15 +540,18 @@ body {
 }
 
 .instrucoes-KDB {
-  background-color: #ffffff; /* cinza claro que preenche toda a largura */
-  padding: px 20px;
+  background-color: #ffffff00; /* cinza claro que preenche toda a largura */
+  padding: 20px 20px;
   width: 100%;
 }
 
 .instrucoes {
-  background-color: #f5f6f8; /* cinza claro que preenche toda a largura */
-  padding: px 20px;
-  width: 100%;
+  background-color: #ffffff3b;
+  padding: 37px 25px;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 15px; /* Texto maior */
+  line-height: 1.6;
 }
 
 .instrucoes-KDB .container {
