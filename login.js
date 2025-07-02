@@ -13,10 +13,10 @@ const credenciais = {
 
     if (credenciais[usuario] && credenciais[usuario] === senha) {
         localStorage.setItem("logado", "true")
-    window.location.href = "index.html"}
+    window.location.href = "site.html"}
 
       if (credenciais[usuario] && credenciais[usuario] === senha) {
-    window.location.href = "index.html"; 
+    window.location.href = "site.html"; 
   } else {
     mensagemErro.textContent = "Usuário ou senha incorretos.";
     mensagemErro.style.display = "block";
