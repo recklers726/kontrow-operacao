@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Kontrow Operações</title>
+  <link rel="stylesheet" href="styleFW.css">
+  <link rel="icon" type="image/png" href="img/kontrowFavicon.png"> <!-- logo kontrow na Header do site -->
+</head>
+<body>
+<header>  
+  <div class="topo"> <!-- Barra azul do cabeçalho -->
+   <div class="logo-container"> 
+  <div class="logo-com-texto"> 
+    <img class="logo" src="img/Logo1.png" alt="Kontrow Operações"> <!-- logo kontrow no cabeçalho -->
+    <div class="logo-texto">OPERAÇÕES</div> <!-- operações abaixo do logo da kontrow-->
+  </div> 
+  <img class="engr1" src="img/operacao_branca.png" alt="Engrenagem 1"> <!--Engrenagens no cabeçalho da pagina-->
+  <img class="engr2" src="img/operacao_branca.png" alt="Engrenagem 2"> <!--Engrenagens no cabeçalho da pagina-->
+</div>
+  </div>
+</header>   
+
+<div class="conteudo-flex"> <!--classe que ajusta os pixeis indepente do zoom-->
+  <div class="passoKDB animar-entrada">Atualização de Firmware</div> <!--Titulo introdução-->
+  <div class="linha-vermelha-bottom-introdução-down animar-entrada"></div> <!--linha vermelha da parte de cima de introdução-->
+</div>
+
+  <div class="coluna animar-entrada">
+    <p><span>1.8.1</span> para atualizar o FW selecione a flag do lado esquerdo do numero HWID da KDB, e no canto superior esquerdo clique em ações depois em atualizar FW, e finalize clicando em prosseguir.</p>
+    <div class="video-box animar-entrada" id="video1">
+      <video controls>
+        <source src="videos/videos-1.0/1.4.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="info animar-entrada">ATENÇÃO: é muito importante não desligar ou reiniciar a KDB enquanto os comandos de FW estiverem sendo carregados.</div>
+  </div>
+
+    <div class="coluna animar-entrada">
+    <p><span>1.8.2</span>após finalização de todos os comandos a KDB irá reiniciar e começar a instalação do FW baixado, assim que for finalizada a instalação a KDB voltará a comunicar e o numero de FW será atualizado.</p>
+    </div>
+  </div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const elementos = document.querySelectorAll('.animar-entrada');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('aparecer');
+          observer.unobserve(entry.target); // para de observar após a animação
+        }
+      });
+    }, {
+      threshold: 0.5 // só ativa quando 50% do elemento estiver visível
+    });
+
+    elementos.forEach(el => observer.observe(el));
+  });
+</script>

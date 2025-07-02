@@ -29,6 +29,118 @@
   }
 }
 
+body, html {
+  height: 100%;
+}
+
+.login-page {
+  display: flex;
+  height: 100vh;
+}
+
+.login-left {
+  width: 50%;
+  background-color: #fff;
+  margin-top: 250px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-left .logo {
+  width: 210px;
+  margin-bottom: 25px;
+  margin-top: -100px;
+}
+
+form {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #f1f7ff;
+}
+
+form input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.link {
+  font-size: 13px;
+  color: #007bff;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.btn-login {
+  padding: 12px;
+  background-color: #e53935;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.btn-login:hover {
+  background-color: #c62828;
+}
+
+.link-secondary {
+  font-size: 13px;
+  color: #333;
+  text-align: center;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.footer-links {
+  margin-top: auto;
+  font-size: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: #333;
+  text-decoration: none;
+}
+
+.login-right {
+  width: 50%;
+  background: url('img/login-background.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+.login-right .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #192A56;
+}
+
+.imgLogin {
+width: 945px;
+height: auto;
+}
+
   #btn-imprimir {
     display: none;
     transition: 1;
@@ -377,14 +489,15 @@ body {
 }
 
 .passoIntrodução {
-  span {
+  span {a{
   font-family: "fonteKontrow";
   font-size: 35px;
   font-weight: bold;
   margin-right: 4px;
+  color: #192a56;
   text-decoration: underline red;
 }}
-
+}
 .passo {
   background-color: #d5d5d53b;
   padding: 20px 30px;
@@ -596,6 +709,61 @@ body {
   margin-left: 13px;
 }
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+  margin-left: 6px;
+}
+
+.tooltip-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #192a56;
+  color: white !important;   
+  font-weight: bold;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 500px;
+  background-color: #d5d5d5d4;
+  color: #192A56 !important;   
+  text-align: center;
+  font-weight: lighter !important;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  top: 150%; /* posição acima do ícone */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  bottom: 87%; /* seta abaixo do tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+
 .coluna-KDB {
   flex: 1;
   display: flex;
@@ -628,6 +796,10 @@ body {
   font-size: 18px;
   line-height: 1.5;
   padding: 0 10px;
+  a{
+    color: #FD720E;
+    text-decoration: underline white;
+  }
 }
 
 .coluna span {
