@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <script>
+  if (
+    localStorage.getItem("logado") !== "true" &&
+    sessionStorage.getItem("logado") !== "true"
+  ) {
+    window.location.href = "index.html"; // redireciona para login
+  }
+</script>
   <meta charset="UTF-8">
   <title>Kontrow Operações</title>
   <link rel="stylesheet" href="style.css">
@@ -8,7 +16,7 @@
 </head>
 <body>
 
-<body class="body-login">
+<body class="bloquear-scroll-e-zoom">
   <div class="login-page">
     <div class="login-left">
         <div class="logo-com-texto"> 
@@ -18,11 +26,9 @@
       <form id="loginForm">
         <input type="email" id="usuario" placeholder="Digite seu e-mail" required>
         <input type="password" id="senha" placeholder="Digite sua senha" required>
-
-        <a href="" class="link">Esqueci minha senha</a>
-
         <button type="submit" class="btn-login">Entrar</button>
-        <a href="" class="link-secondary">Obtenha uma senha</a>
+         <label class="manter-login">
+          <input type="checkbox" id="manterLogin">Mantenha-me conectado</label>
 
         <p id="mensagem-erro" style="display: none;"></p>
       </form>
@@ -38,5 +44,19 @@
     </div>
   </div>
   <script src="login.js"></script>
+
+  <script>
+  // Sempre que alguém tentar mudar o zoom (via Ctrl + Scroll), desfaz
+  document.addEventListener('wheel', function(e) {
+    if (e.ctrlKey) {
+      e.preventDefault();
+    }
+  }, { passive: false });
+
+  // Evita zoom com gestos (alguns navegadores suportam isso)
+  document.addEventListener('gesturestart', e => e.preventDefault());
+  document.addEventListener('gesturechange', e => e.preventDefault());
+  document.addEventListener('gestureend', e => e.preventDefault());
+</script>
 </body>
 </html>

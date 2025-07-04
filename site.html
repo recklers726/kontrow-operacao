@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <script>
-    if (localStorage.getItem("logado") !== "true") {
-      window.location.href = "index.html"; // redireciona pro login
+
+  <script>
+  if (
+    localStorage.getItem("logado") !== "true" &&
+    sessionStorage.getItem("logado") !== "true"
+  ) {
+    window.location.href = "index.html"; // redireciona para login
+  }
+</script>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const usuario = document.getElementById("usuario").value;
+  const senha = document.getElementById("senha").value;
+  const manterLogin = document.getElementById("manterLogin").checked;
+
+  // Aqui você faria uma validação real (ex: verificar usuário e senha)
+  if (usuario && senha) {
+    // Se o usuário marcou "manter login"
+    if (manterLogin) {
+      localStorage.setItem("logado", "true");
+    } else {
+      sessionStorage.setItem("logado", "true");
     }
+
+    window.location.href = "dashboard.html"; // ou sua página principal
+  } else {
+    document.getElementById("mensagem-erro").textContent = "Usuário ou senha inválidos";
+    document.getElementById("mensagem-erro").style.display = "block";
+  }
+});
   </script>
+
   <meta charset="UTF-8">
   <title>Kontrow Operações</title>
   <link rel="stylesheet" href="style.css">
