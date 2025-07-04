@@ -6,6 +6,7 @@
       window.location.href = "index.html"; // redireciona pro login
     }
   </script>
+
   <meta charset="UTF-8">
   <title>Kontrow Operações</title>
   <link rel="stylesheet" href="style.css">
@@ -22,14 +23,30 @@
     <img src="img/icons8-usuário-30.png" alt="Usuario" class="icone-usuario" id="abrir-menu">
     <div class="abaixarMenu" id="menu-opcoes">
       <a href="index.html">Sair</a>
-      <a href="x">Configurações</a>
-      <a href="x" id="sair">Perfil</a>
   </div></div>
   </div>  <img class="engr1" src="img/operacao_branca.png" alt="Engrenagem 1">
   <img class="engr2" src="img/operacao_branca.png" alt="Engrenagem 2">
 </div>
   </div> 
 </header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const botaoMenu = document.getElementById("abrir-menu");
+    const menu = document.getElementById("menu-opcoes");
+
+    botaoMenu.addEventListener("click", () => {
+      menu.classList.toggle("ativo");
+    });
+
+    // Fechar se clicar fora
+    document.addEventListener("click", (e) => {
+      if (!menu.contains(e.target) && !botaoMenu.contains(e.target)) {
+        menu.classList.remove("ativo");
+      }
+    });
+  });
+</script>
 
   <section class="instrucoes-KDB animar-entrada"> <!--background da pagina inteira-->
 
@@ -552,5 +569,7 @@
     window.location.href = "index.html";
   });
 </script>
+
+
 </body>
 </html>

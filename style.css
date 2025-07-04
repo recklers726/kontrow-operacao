@@ -52,14 +52,31 @@
   border: 1px solid #ddd;
   border-radius: 6px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  display: none;
   flex-direction: column;
-  min-width: none;
+  min-width: 140px;
+
+  /* ANIMAÇÃO */
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+  padding: 12px;
+  font-family: "openSans";
+  color: #192A56;
+  font-weight: 500;
+  z-index: 99;
 }
+
+.abaixarMenu.ativo {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);}
 
 .abaixarMenu {
   padding: 12px;
   text-decoration: none;
+  font-family: "openSans";
   color: #192A56;
   font-weight: 500;
   transition: background-color 0.3s;
@@ -89,6 +106,25 @@ body, html {
   align-items: center;
 }
 
+.msgError {
+  visibility: hidden; 
+  font-family: "openSans";
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  background-color: #e53935;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.msgError.mostrar {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .login-left .logo {
   width: 210px;
   margin-bottom: 25px;
@@ -116,6 +152,10 @@ form input:focus {
   outline: none;
 }
 
+.quadrado1 {
+  color: blue;
+}
+
 .link {
   font-size: 13px;
   color: #007bff;
@@ -136,7 +176,7 @@ form input:focus {
 
 .btn-login {
   padding: 12px;
-  background-color: #e53935;
+  background-color: #192a56;
   color: white;
   font-weight: bold;
   border: none;
@@ -146,7 +186,7 @@ form input:focus {
 }
 
 .btn-login:hover {
-  background-color: #c62828;
+  background-color: #0d162e;
 }
 
 .link-secondary {
