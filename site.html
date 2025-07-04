@@ -1,24 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <script>
+    if (localStorage.getItem("logado") !== "true") {
+      window.location.href = "index.html"; // redireciona pro login
+    }
+  </script>
   <meta charset="UTF-8">
   <title>Kontrow Operações</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="img/kontrowFavicon.png"> <!-- logo kontrow na Header do site -->
+  <link rel="icon" type="image/png" href="img/kontrowFavicon.png">
 </head>
 <body>
-<header>  
-  <div class="topo"> <!-- Barra azul do cabeçalho -->
-   <div class="logo-container"> 
-  <div class="logo-com-texto"> 
-    <img class="logo" src="img/Logo1.png" alt="Kontrow Operações"> <!-- logo kontrow no cabeçalho -->
-      <img class="engr1" src="img/operacao_branca.png" alt="Engrenagem 1"> <!--Engrenagens no cabeçalho da pagina-->
-  <img class="engr2" src="img/operacao_branca.png" alt="Engrenagem 2"> <!--Engrenagens no cabeçalho da pagina-->
-    <div class="logo-texto">OPERAÇÕES</div> <!-- operações abaixo do logo da kontrow-->
-  </div> 
+<header>
+  <div class="topo">
+   <div class="logo-container">
+  <div class="logo-com-texto">
+    <img class="logo" src="img/Logo1.png" alt="Kontrow Operações">
+    <div class="logo-texto">OPERAÇÕES</div>
+      <div class="menu-usuario">
+    <img src="img/icons8-usuário-30.png" alt="Usuario" class="icone-usuario" id="abrir-menu">
+    <div class="abaixarMenu" id="menu-opcoes">
+      <a href="index.html">Sair</a>
+      <a href="x">Configurações</a>
+      <a href="x" id="sair">Perfil</a>
+  </div></div>
+  </div>  <img class="engr1" src="img/operacao_branca.png" alt="Engrenagem 1">
+  <img class="engr2" src="img/operacao_branca.png" alt="Engrenagem 2">
 </div>
-  </div>
-</header>   
+  </div> 
+</header>
 
   <section class="instrucoes-KDB animar-entrada"> <!--background da pagina inteira-->
 
@@ -194,9 +205,9 @@
 </div>
   <div class="container" id="video5">
   <div class="coluna animar-entrada">
-    <p><span>1.9</span> Selecione KDB clique em “Ações” e logo após clique em “Enviar Perfil”, selecione o perfil desejado <span class="tooltip">
+    <p><span>1.9</span> Selecione KDB clique em “Ações” e logo após clique em “Enviar Perfil”, selecione o perfil desejado de acordo com a orientação do suporte no ticket<span class="tooltip">
             <span class="tooltip-icon">?</span>
-            <span class="tooltip-text">Tickets instalação/manutenção são passado pelo suporte ou abertos pelo próprio cliente via <a href="https://kontrow.movidesk.com/" target="_blank">movidesk</a></span>
+            <span class="tooltip-text">Tickets instalação/manutenção são passado pelo suporte via <a href="https://kontrow.movidesk.com/" target="_blank">movidesk</a></span>
           </span>,  Clique em prosseguir e aguarde o equipamento comissionar”</p>
     <div class="video-box animar-entrada">
       <video controls>
@@ -228,7 +239,7 @@
     <div class="barra-separadora animar-entrada"></div>
 
   <div class="coluna animar-entrada" id="video8">
-    <p><span>1.12</span>No canto esquerdo, coloque o mouse sobre o ícone da aba de “Operação”, depois clique em “Equipamentos” e em “Nº Equip” procure pelo ID que está sendo configurado, e aguarde o carregamento do script <span class="tooltip">
+    <p><span>1.12</span>No canto esquerdo, coloque o mouse sobre o ícone da aba de “Operação”, depois clique em “Equipamentos” e em “Nº Equip” procure pelo HWID que está sendo configurado, e aguarde o carregamento do script <span class="tooltip">
             <span class="tooltip-icon">?</span>
             <span class="tooltip-text">o botão de pós chave da bancada precisa necessariamente estar desligado para que o script carregue</span>
           </span>selecione a KDB clique em ações e depois analise se o comando "Scheduling Commit for Script Mirror Zone Command Scheduled by Server" está com a resposta ACK na coluna valor </p>
@@ -493,12 +504,6 @@
 </script>
 
 <script>
-  if (localStorage.getItem("logado") !== "true") {
-    window.location.href = "index.html"; // redireciona pro login
-  }
-</script>
-
-<script>
   document.addEventListener("DOMContentLoaded", function () {
     const img = document.querySelector(".zoom-img");
 
@@ -521,6 +526,30 @@
 
       this.style.transformOrigin = `${x}% ${y}%`;
     });
+  });
+</script>
+
+<script>
+  const iconeUsuario = document.getElementById("abrir-menu");
+  const menu = document.getElementById("menu-opcoes");
+  const botaoSair = document.getElementById("sair");
+
+  iconeUsuario.addEventListener("click", () => {
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+  });
+
+  // Fechar o menu se clicar fora
+  document.addEventListener("click", function (event) {
+    if (!event.target.closest(".menu-usuario")) {
+      menu.style.display = "none";
+    }
+  });
+
+  // Lógica de sair
+  botaoSair.addEventListener("click", (e) => {
+    e.preventDefault();
+    localStorage.removeItem("logado");
+    window.location.href = "index.html";
   });
 </script>
 </body>
