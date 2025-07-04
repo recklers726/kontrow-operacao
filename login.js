@@ -34,10 +34,3 @@ const credenciais = {
   document.addEventListener('gesturestart', e => e.preventDefault());
   document.addEventListener('gesturechange', e => e.preventDefault());
   document.addEventListener('gestureend', e => e.preventDefault());
-
-    if (
-    localStorage.getItem("logado") !== "true" &&
-    sessionStorage.getItem("logado") !== "true"
-  ) {
-    window.location.href = "index.html"; // redireciona para login
-  }
