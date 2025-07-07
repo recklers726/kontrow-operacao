@@ -1,8 +1,8 @@
-document.getElementById("loginForm").addEventListener("submit", function(evento) {
-  evento.preventDefault();
-
-  const usuario = document.getElementById("usuario").value.trim();
-  const senha = document.getElementById("senha").value.trim();
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("loginForm");
+  const emailInput = document.getElementById("usuario");
+  const senhaInput = document.getElementById("senha");
+  const erro = document.getElementById("mensagem-erro");
 
   const credenciais = {
     "luiz.carvalho@kontrow.com.br": "968539183",
@@ -10,38 +10,40 @@ document.getElementById("loginForm").addEventListener("submit", function(evento)
     "gilberto.rodrigues@kontrow.com.br": "967745830"
   };
 
-  if (credenciais[usuario] && credenciais[usuario] === senha) {
-    localStorage.setItem("logado", "true");
-    window.location.href = "instrução.html";
-  } else {
-    mostrarErro("Usuário ou senha incorretos.");
-  }
-});
+  form.addEventListener("submit", (evento) => {
+    evento.preventDefault();
 
+    const usuario = emailInput.value.trim();
+    const senha = senhaInput.value.trim();
 
-
-function mostrarErro(mensagem) {
-  const erro = document.getElementById("mensagem-erro");
-  erro.textContent = mensagem;
-  erro.classList.add("mostrar");
-
-  // Força reflow (reinicia animação)
-  void erro.offsetWidth;
-
-  // Remove após 4 segundos
-  setTimeout(() => {
-    erro.classList.remove("mostrar");
-  }, 4000);
-}
-
-  // Sempre que alguém tentar mudar o zoom (via Ctrl + Scroll), desfaz
-  document.addEventListener('wheel', function(e) {
-    if (e.ctrlKey) {
-      e.preventDefault();
+    if (credenciais[usuario] && credenciais[usuario] === senha) {
+      localStorage.setItem("logado", "true");
+      window.location.href = "instrucao.html"; // evite usar ç em URLs
+    } else {
+      mostrarErro("Usuário ou senha incorretos.");
     }
+  });
+
+  function mostrarErro(mensagem) {
+    erro.textContent = mensagem;
+    erro.classList.add("mostrar");
+
+    // Reinicia a animação
+    void erro.offsetWidth;
+
+    // Remove erro depois de 4 segundos
+    setTimeout(() => {
+      erro.classList.remove("mostrar");
+    }, 4000);
+  }
+
+  // Bloquear zoom via Ctrl+Scroll
+  document.addEventListener('wheel', function(e) {
+    if (e.ctrlKey) e.preventDefault();
   }, { passive: false });
 
-  // Evita zoom com gestos (alguns navegadores suportam isso)
-  document.addEventListener('gesturestart', e => e.preventDefault());
-  document.addEventListener('gesturechange', e => e.preventDefault());
-  document.addEventListener('gestureend', e => e.preventDefault());
+  // Bloquear gestos de zoom
+  ['gesturestart', 'gesturechange', 'gestureend'].forEach(evt => {
+    document.addEventListener(evt, e => e.preventDefault());
+  });
+});

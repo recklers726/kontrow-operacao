@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     botaoSair.addEventListener("click", (e) => {
       e.preventDefault();
       localStorage.removeItem("logado");
-      window.location.href = "index.html";
+      window.location.href = "isntrução.html";
     });
   }
 
