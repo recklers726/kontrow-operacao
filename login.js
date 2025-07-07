@@ -12,7 +12,7 @@ document.getElementById("loginForm").addEventListener("submit", function(evento)
 
   if (credenciais[usuario] && credenciais[usuario] === senha) {
     localStorage.setItem("logado", "true");
-    window.location.href = "site.html";
+    window.location.href = "instrução.html";
   } else {
     mostrarErro("Usuário ou senha incorretos.");
   }
