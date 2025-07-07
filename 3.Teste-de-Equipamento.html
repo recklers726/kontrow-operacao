@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script>
+    if (localStorage.getItem("logado") !== "true") {
+      window.location.href = "index.html"; // redireciona pro login
+    }
+  </script>
+
+  <meta charset="UTF-8">
+  <title>Kontrow Operações</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="img/kontrowFavicon.png">
+</head>
+<body>
+<header>
+  <div class="topo">
+   <div class="logo-container">
+  <div class="logo-com-texto">
+    <img class="logo" src="img/Logo1.png" alt="Kontrow Operações">
+    <div class="logo-texto">OPERAÇÕES</div>
+      <div class="menu-usuario">
+    <img src="img/icons8-usuário-30.png" alt="Usuario" class="icone-usuario" id="abrir-menu">
+    <div class="abaixarMenu" id="menu-opcoes">
+      <a href="index.html">Sair</a>
+  </div></div>
+  </div>  <img class="engr1" src="img/operacao_branca.png" alt="Engrenagem 1">
+  <img class="engr2" src="img/operacao_branca.png" alt="Engrenagem 2">
+</div>
+  </div> 
+</header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const botaoMenu = document.getElementById("abrir-menu");
+    const menu = document.getElementById("menu-opcoes");
+
+    botaoMenu.addEventListener("click", () => {
+      menu.classList.toggle("ativo");
+    });
+
+    // Fechar se clicar fora
+    document.addEventListener("click", (e) => {
+      if (!menu.contains(e.target) && !botaoMenu.contains(e.target)) {
+        menu.classList.remove("ativo");
+      }
+    });
+  });
+</script>
+
+
+ <section>
+  <div id="passo3" class="passo2"></div>
+<div class="bloco-producao animar-entrada">
+  <div id="passo3" class="passo2">3. TESTE DE EQUIPAMENTOS</div>
+
+  <div class="conteudo-flex">
+    <p class="subtitulo"><strong>Hardwares necessários:</strong></p>
+    <p class="softwares">KDB (Configurada) / Spoke / Teste de bancada </p>
+  </div>
+
+  <div class="linha-vermelha-bottom"></div>
+</div>
+
+</section>
+
+<section class="instrucoes">
+  <div class="container">
+    <div class="coluna animar-entrada">
+      <div class="passo passo-1_1 animar-entrada">
+        <p><span>3.1</span> Após conclusão de todos os processos do item 1 PRODUÇÃO DE EQUIPAMENTO, ligue a KDB e um SPOKE em um teste físico, e espere até que ambos deem boot (segundo led do SPOKE pare de piscar e apenas o primeiro fique aceso piscando lentamente).</p>
+      </div>
+      <div class="passo passo-1_3 animar-entrada">
+        <p><span>3.2</span> Após ambos os equipamentos iniciarem, ligue o botão do pós chave, e aguarde que o SPOKE fique com os leds vermelhos.</p>
+      </div>
+    </div>
+
+    <div class="barra-separadora animar-entrada"></div>
+
+    <div class="coluna animar-entrada">
+      <div class="passo passo-1_2 animar-entrada">
+        <p><span>3.3</span> Com um cartão válido que esteja configurado na conta do cliente encoste o cartão no SPOKE para que ele o leia (os leds devem piscar em verde e o SPOKE deve emitir uma confirmação sonora).</p>
+      </div>
+      <div class="passo passo-1_4 animar-entrada">
+        <p><span>3.4</span> Em casos que a KBD esteja configurada como E5 ou E6 o SPOKE deve sempre ficar com os leds em verde variando na vertical, e no teste físico a luz de partida deve ser acionada enquanto os leds do SPOKE estiverem em verde.</p>
+      </div>
+    </div>
+  </div>
+
+    <div class="container">
+    <div class="coluna animar-entrada">
+      <div class="passo passo-1_1 animar-entrada">
+        <p><span>3.5</span> Em casos que a KDB esteja configurada como E3 o teste deve funcionar como uma lógica invertida, quando a KDB for conectada ao teste e iniciar a luz de partida acenderá, o SPOKE ficará com os leds vermelhos variando na vertical, assim que for realizada a leitura do cartão, os leds irão ficar verdes e a luz de partida do teste irá se apagar</p>
+      </div>
+      <div class="passo passo-1_3 animar-entrada">
+        <p><span>3.6</span> Qualquer outra variação no teste que não seja como descrito acima, é recomendado que seja revisado os passos 1.12 e 1.13 no item 1. PRODUÇÃO DE EQUIPAMENTOS.</p>
+      </div>
+    </div>
+
+    <div class="barra-separadora animar-entrada"></div>
+
+    <div class="coluna animar-entrada">
+      <div class="passo passo-1_2 animar-entrada">
+        <p><span>3.7</span> Se todos os passos foram feitos dentro do que está descrito e mesmo assim o funcionamento apresenta diferença, pode existir algum problema físico na KDB ou SPOKE</p>
+      </div>
+      <div class="passo passo-1_4 animar-entrada">
+        <p><span>3.8</span> Se tudo estiver OK, desligue o pós chave do teste físico e aguarde até que a luz de partida desligue e o SPOKE retorne aos leds vermelhos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const botoes = document.querySelectorAll('.botao, .botao2, .botao3, .botao4, .botao5, .botao6');
+
+    botoes.forEach(botao => {
+      const etapa = botao.closest('.etapa');
+
+      botao.addEventListener('mouseenter', () => {
+        etapa.classList.add('hover-etapa');
+      });
+
+      botao.addEventListener('mouseleave', () => {
+        etapa.classList.remove('hover-etapa');
+      });
+    });
+  });
+</script>
+
+<button id="btn-imprimir" onclick="window.print()">🖨️</button>
+
+<button id="btn-topo" title="Voltar ao topo">↑</button>
+
+
+<script>
+  const btnTopo = document.getElementById("btn-topo");
+  const btnPrint = document.getElementById("btn-imprimir");
+
+  // Mostrar o botão quando o usuário rolar a página
+  window.onscroll = function () {
+    const scrollY = document.body.scrollTop || document.documentElement.scrollTop;
+
+        btnPrint.style.display = scrollY > 200 ? "block" : "none";
+         btnTopo.style.display = scrollY > 200 ? "block" : "none";
+  };
+
+  // Ao clicar no botão, rolar suavemente para o topo e aplicar a animação
+  btnTopo.addEventListener("click", () => {
+    // Adiciona classe de animação
+    btnTopo.classList.add("botao-animado");
+
+    // Rolagem suave para o topo
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+    // Remove a classe após a duração da animação
+    setTimeout(() => {
+      btnTopo.classList.remove("botao-animado");
+    }, 300); // deve coincidir com o tempo da animação CSS
+  });
+</script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const elementos = document.querySelectorAll('.animar-entrada');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('aparecer');
+          observer.unobserve(entry.target); // para de observar após a animação
+        }
+      });
+    }, {
+      threshold: 0.5 // só ativa quando 50% do elemento estiver visível
+    });
+
+    elementos.forEach(el => observer.observe(el));
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const img = document.querySelector(".zoom-img");
+
+    img.addEventListener("click", function () {
+      this.classList.toggle("zoomed");
+
+      // Ao sair do zoom, reseta transform
+      if (!this.classList.contains("zoomed")) {
+        this.style.transformOrigin = "center center";
+        this.style.transform = "";
+      }
+    });
+
+    img.addEventListener("mousemove", function (e) {
+      if (!this.classList.contains("zoomed")) return;
+
+      const { left, top, width, height } = this.getBoundingClientRect();
+      const x = ((e.clientX - left) / width) * 100;
+      const y = ((e.clientY - top) / height) * 100;
+
+      this.style.transformOrigin = `${x}% ${y}%`;
+    });
+  });
+</script>
+
+<script>
+  const iconeUsuario = document.getElementById("abrir-menu");
+  const menu = document.getElementById("menu-opcoes");
+  const botaoSair = document.getElementById("sair");
+
+  iconeUsuario.addEventListener("click", () => {
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+  });
+
+  // Fechar o menu se clicar fora
+  document.addEventListener("click", function (event) {
+    if (!event.target.closest(".menu-usuario")) {
+      menu.style.display = "none";
+    }
+  });
+
+  // Lógica de sair
+  botaoSair.addEventListener("click", (e) => {
+    e.preventDefault();
+    localStorage.removeItem("logado");
+    window.location.href = "index.html";
+  });
+</script>
+
+
+</body>
+</html>

@@ -5,9 +5,9 @@ document.getElementById("loginForm").addEventListener("submit", function(evento)
   const senha = document.getElementById("senha").value.trim();
 
   const credenciais = {
-    "luiz.carvalho@kontrow.com.br": "1234",
-    "david.bandeira@kontrow.com.br": "1234",
-    "gilberto.rodrigues@kontrow.com.br": "1234"
+    "luiz.carvalho@kontrow.com.br": "968539183",
+    "david.bandeira@kontrow.com.br": "970717341",
+    "gilberto.rodrigues@kontrow.com.br": "967745830"
   };
 
   if (credenciais[usuario] && credenciais[usuario] === senha) {

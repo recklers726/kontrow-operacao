@@ -655,11 +655,11 @@ body {
 }
 
 .passo2 {
-  font-size: 28px;
+  font-size: 25px;
   font-family: 'openSans';
   font-weight: bold;
+  margin-top: 55px;
   color: #192a56;
-  margin-bottom: 20px;
 }
 
 .conteudo-flex {
@@ -703,17 +703,17 @@ body {
 }
 
 .linha-vermelha-bottom-introdução-up{
-  width: 17%;
+  width: 24%;
   height: 4px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
   background-color: red;
   border-radius: 2px;
-  margin-top: 2%;
+  margin-top: 0%;
   margin-bottom: -0.2%;
 }
 
 .linha-vermelha-bottom-introdução-down{
-  width: 17%;
+  width: 27%;
   height: 4px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
   background-color: red;

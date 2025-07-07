@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script>
+    if (localStorage.getItem("logado") !== "true") {
+      window.location.href = "index.html"; // redireciona pro login
+    }
+  </script>
+
+  <meta charset="UTF-8">
+  <title>Kontrow Operações</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="img/kontrowFavicon.png">
+</head>
+<body>
+<header>
+  <div class="topo">
+   <div class="logo-container">
+  <div class="logo-com-texto">
+    <img class="logo" src="img/Logo1.png" alt="Kontrow Operações">
+    <div class="logo-texto">OPERAÇÕES</div>
+      <div class="menu-usuario">
+    <img src="img/icons8-usuário-30.png" alt="Usuario" class="icone-usuario" id="abrir-menu">
+    <div class="abaixarMenu" id="menu-opcoes">
+      <a href="index.html">Sair</a>
+  </div></div>
+  </div>  <img class="engr1" src="img/operacao_branca.png" alt="Engrenagem 1">
+  <img class="engr2" src="img/operacao_branca.png" alt="Engrenagem 2">
+</div>
+  </div> 
+</header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const botaoMenu = document.getElementById("abrir-menu");
+    const menu = document.getElementById("menu-opcoes");
+
+    botaoMenu.addEventListener("click", () => {
+      menu.classList.toggle("ativo");
+    });
+
+    // Fechar se clicar fora
+    document.addEventListener("click", (e) => {
+      if (!menu.contains(e.target) && !botaoMenu.contains(e.target)) {
+        menu.classList.remove("ativo");
+      }
+    });
+  });
+</script>
+
+<div class="conteudo-flex">
+      <div class="titulo-container animar-entrada">
+     <h1 class="titulo animar-entrada">INSTRUÇÃO TÉCNICA OPERAÇÃO</h1>
+    </div>
+    <div class="linha-vermelha-bottom-instrução animar-entrada"></div></div> <!--linha vermelha abaixo de instrução ténica de operação-->
+    
+
+  <main>
+      <section class="etapas animar-entrada"> <!--alinhar dos botões de etapas-->
+      <div class="etapa animar-entrada">
+        <a href="1.produção-de-equipamentos.html" class="botao">ir ao passo 1</a>
+        <img src="img/icons8-configuração-80.png" alt="Produção"><!--imagem e texto do botão 1-->
+        <h2>1. PRODUÇÃO DE EQUIPAMENTOS</h2>
+        <p>Comissionamento e produção de equipamentos para envio de cliente instalação/estoque/visita técnica</p>
+      </div>
+      <div class="etapa animar-entrada">
+        <a href="2.Reconfiguração-de-equipamento.html" class="botao2">ir ao passo 2</a>
+        <img src="img/painel-de-controle.png" alt="Reconfiguração"><!--imagem e texto do botão 2-->
+        <h2>2. RECONFIGURAÇÃO DE EQUIPAMENTO</h2>
+        <p>Mudar a configuração de um equipamento que já está na conta de um cliente</p>
+      </div>
+      <div class="etapa animar-entrada">
+        <a href="#passo3" class="botao3">ir ao passo 3</a><!--imagem e texto do botão 3-->
+        <img src="img/teste-de-unidade.png" alt="Teste">
+        <h2>3. TESTE DE EQUIPAMENTO</h2>
+        <p>Teste de bloqueio spoke/KDB para avaliação técnica</p>
+      </div>
+      <div class="etapa animar-entrada">
+        <a href="#passo4" class="botao4">ir ao passo 4</a><!--imagem e texto do botão 4-->
+        <img src="img/entrega.png" alt="Envio">
+        <h2>4. PREPARAÇÃO PARA ENVIO CLIENTE</h2>
+        <p>Separação de material de acordo com o atendimento necessário</p>
+      </div>      
+    </section>
+    <div class="linha-vermelha-top animar-entrada"></div>
+    <section class="etapas animar-entrada">
+      <div class="etapa animar-entrada">
+        <a href="#passo5" class="botao5">ir ao passo 5</a><!--imagem e texto do botão 5-->
+        <img src="img/icons8-fatura-100.png" alt="Produção">
+        <h2>5. Emissão Nota fiscal</h2>
+        <p>Emissão de NF para envio de material ao cliente</p>
+      </div>
+      <div class="etapa animar-entrada">
+        <a href="#passo6" class="botao6">ir ao passo 6</a><!--imagem e texto do botão 6-->
+        <img src="img/icons8-refund-100-invertido-contorno.png"Reconfiguração">
+        <h2>6. Retorno de material</h2>
+        <p>Entrada de estoque e remoção de equipamentos da conta do cliente</p>
+          </div>      
+    </section>
+
+ <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const botoes = document.querySelectorAll('.botao, .botao2, .botao3, .botao4, .botao5, .botao6');
+
+    botoes.forEach(botao => {
+      const etapa = botao.closest('.etapa');
+
+      botao.addEventListener('mouseenter', () => {
+        etapa.classList.add('hover-etapa');
+      });
+
+      botao.addEventListener('mouseleave', () => {
+        etapa.classList.remove('hover-etapa');
+      });
+    });
+  });
+</script>
+
+<button id="btn-imprimir" onclick="window.print()">🖨️</button>
+
+<button id="btn-topo" title="Voltar ao topo">↑</button>
+
+
+<script>
+  const btnTopo = document.getElementById("btn-topo");
+  const btnPrint = document.getElementById("btn-imprimir");
+
+  // Mostrar o botão quando o usuário rolar a página
+  window.onscroll = function () {
+    const scrollY = document.body.scrollTop || document.documentElement.scrollTop;
+
+        btnPrint.style.display = scrollY > 200 ? "block" : "none";
+         btnTopo.style.display = scrollY > 200 ? "block" : "none";
+  };
+
+  // Ao clicar no botão, rolar suavemente para o topo e aplicar a animação
+  btnTopo.addEventListener("click", () => {
+    // Adiciona classe de animação
+    btnTopo.classList.add("botao-animado");
+
+    // Rolagem suave para o topo
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+    // Remove a classe após a duração da animação
+    setTimeout(() => {
+      btnTopo.classList.remove("botao-animado");
+    }, 300); // deve coincidir com o tempo da animação CSS
+  });
+</script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const elementos = document.querySelectorAll('.animar-entrada');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('aparecer');
+          observer.unobserve(entry.target); // para de observar após a animação
+        }
+      });
+    }, {
+      threshold: 0.5 // só ativa quando 50% do elemento estiver visível
+    });
+
+    elementos.forEach(el => observer.observe(el));
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const img = document.querySelector(".zoom-img");
+
+    img.addEventListener("click", function () {
+      this.classList.toggle("zoomed");
+
+      // Ao sair do zoom, reseta transform
+      if (!this.classList.contains("zoomed")) {
+        this.style.transformOrigin = "center center";
+        this.style.transform = "";
+      }
+    });
+
+    img.addEventListener("mousemove", function (e) {
+      if (!this.classList.contains("zoomed")) return;
+
+      const { left, top, width, height } = this.getBoundingClientRect();
+      const x = ((e.clientX - left) / width) * 100;
+      const y = ((e.clientY - top) / height) * 100;
+
+      this.style.transformOrigin = `${x}% ${y}%`;
+    });
+  });
+</script>
+
+<script>
+  const iconeUsuario = document.getElementById("abrir-menu");
+  const menu = document.getElementById("menu-opcoes");
+  const botaoSair = document.getElementById("sair");
+
+  iconeUsuario.addEventListener("click", () => {
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+  });
+
+  // Fechar o menu se clicar fora
+  document.addEventListener("click", function (event) {
+    if (!event.target.closest(".menu-usuario")) {
+      menu.style.display = "none";
+    }
+  });
+
+  // Lógica de sair
+  botaoSair.addEventListener("click", (e) => {
+    e.preventDefault();
+    localStorage.removeItem("logado");
+    window.location.href = "index.html";
+  });
+</script>
+
+
+</body>
+</html>
