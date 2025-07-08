@@ -5,9 +5,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const erro = document.getElementById("mensagem-erro");
 
 const credenciais = [
-  { email: "luiz.carvalho@kontrow.com.br", senha: "968539183" },
-  { email: "david.bandeira@kontrow.com.br", senha: "970717341" },
-  { email: "gilberto.rodrigues@kontrow.com.br", senha: "967745830" }
+  { email: "luiz.carvalho@kontrow.com.br",
+    senha: "968539183" },
+  { email: "david.bandeira@kontrow.com.br",
+    senha: "970717341" },
+  { email: "gilberto.rodrigues@kontrow.com.br",
+     senha: "967745830",},
+  { email: "assaf@kontrow.com.br",
+     senha: "999082266",}
 ];
 
   form.addEventListener("submit", (evento) => {
