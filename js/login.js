@@ -4,11 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const senhaInput = document.getElementById("senha");
   const erro = document.getElementById("mensagem-erro");
 
-  const credenciais = {
-    "luiz.carvalho@kontrow.com.br": "968539183",
-    "david.bandeira@kontrow.com.br": "970717341",
-    "gilberto.rodrigues@kontrow.com.br": "967745830"
-  };
+const credenciais = [
+  { email: "luiz.carvalho@kontrow.com.br", senha: "968539183" },
+  { email: "david.bandeira@kontrow.com.br", senha: "970717341" },
+  { email: "gilberto.rodrigues@kontrow.com.br", senha: "967745830" }
+];
 
   form.addEventListener("submit", (evento) => {
     evento.preventDefault();
@@ -16,12 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const usuario = emailInput.value.trim();
     const senha = senhaInput.value.trim();
 
-    if (credenciais[usuario] && credenciais[usuario] === senha) {
-      localStorage.setItem("logado", "true");
-      window.location.href = "instrucao.html"; // evite usar ç em URLs
-    } else {
-      mostrarErro("Usuário ou senha incorretos.");
-    }
+const usuarioValido = credenciais.find(cred => cred.email === usuario && cred.senha === senha);
+
+if (usuarioValido) {
+  localStorage.setItem("logado", "true");
+  window.location.href = "instrucao.html";
+} else {
+  mostrarErro("Usuário ou senha incorretos.");
+}
   });
 
   function mostrarErro(mensagem) {

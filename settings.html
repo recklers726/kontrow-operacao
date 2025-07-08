@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configurações do Usuário</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="settings.css">
+  <script src="js/settings.js" defer></script>
+</head>
+<body class="configuracoes-body">
+  <div class="configuracoes-container">
+    <h1 class="titulo-config">Configurações</h1>
+
+    <div class="usuario-section">
+      <div class="usuario-info">
+        <img src="img/default-user.png" alt="Foto do Usuário" id="foto-usuario" class="foto-usuario">
+        <input type="file" id="input-foto" class="input-foto" accept="image/*">
+        <label for="input-foto" class="botao-alterar-foto">Alterar Foto</label>
+      </div>
+
+      <div class="campo-config">
+        <label for="nome">Nome do Usuário</label>
+        <input type="text" id="nome" placeholder="Digite seu nome">
+      </div>
+
+      <div class="campo-config">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" placeholder="Digite sua nova senha">
+      </div>
+    </div>
+
+    <div class="preferencias">
+      <div class="campo-toggle">
+        <span>Modo Escuro</span>
+        <label class="toggle-switch">
+          <input type="checkbox" id="toggle-escuro">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="campo-toggle">
+        <span>Tamanho da Fonte</span>
+        <label class="toggle-switch">
+          <input type="checkbox" id="toggle-fonte">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
