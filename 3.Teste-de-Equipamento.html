@@ -22,7 +22,7 @@
       <div class="menu-usuario">
     <img src="img/icons8-usuário-30.png" alt="Usuario" class="icone-usuario" id="abrir-menu">
     <div class="abaixarMenu" id="menu-opcoes">
-                        <label class="toggle-switch">
+                  <label class="toggle-switch">
   <input type="checkbox" id="darkModeToggle" />
   <div class="slider">
  <img src="img/sun.png" class="icon sun" alt="Modo claro">
@@ -38,7 +38,6 @@
 </div>
   </div> 
 </header>
-
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const botaoMenu = document.getElementById("abrir-menu");
@@ -54,71 +53,120 @@
         menu.classList.remove("ativo");
       }
     });
-  });
-</script>
-
-
- <section>
-  <div id="passo3" class="passo2"></div>
+  });</script>
+  
+  
 <div class="bloco-producao animar-entrada">
-  <div id="passo3" class="passo2">3. TESTE DE EQUIPAMENTOS</div>
-
+  <div id="passo2" class="passo2">3. TESTE DE EQUIPAMENTO</div>
+  <div class="linha-vermelha-bottom-introdução-up animar-entrada"></div>
   <div class="conteudo-flex">
-    <p class="subtitulo"><strong>Hardwares necessários:</strong></p>
-    <p class="softwares">KDB (Configurada) / Spoke / Teste de bancada </p>
   </div>
-
-  <div class="linha-vermelha-bottom"></div>
 </div>
 
-</section>
+    <section class="instrucoes-KDB animar-entrada"> <!--background da pagina inteira-->
 
-<section class="instrucoes">
-  <div class="container">
-    <div class="coluna animar-entrada">
-      <div class="passo passo-1_1 animar-entrada">
-        <p><span>3.1</span> Após conclusão de todos os processos do item 1 PRODUÇÃO DE EQUIPAMENTO, ligue a KDB e um SPOKE em um teste físico, e espere até que ambos deem boot (segundo led do SPOKE pare de piscar e apenas o primeiro fique aceso piscando lentamente).</p>
-      </div>
-      <div class="passo passo-1_3 animar-entrada">
-        <p><span>3.2</span> Após ambos os equipamentos iniciarem, ligue o botão do pós chave, e aguarde que o SPOKE fique com os leds vermelhos.</p>
-      </div>
+    <div class="container animar-entrada"> 
+      <div class="coluna-KDB animar-entrada"> <!--coluna que alinha os itens-->
+        <div class="software animar-entrada">softwares</div> <!--subtitulo software na introdução-->
+        <div class="linha-vermelha-bottom-software animar-entrada"></div> <!--linha vermelha abaixo do subtitulo softwares-->
+      <div class="passoIntrodução-hardware animar-entrada"> <!--txt box cinza-->
+        <p><span>
+          <a href="https://kontrow.movidesk.com/" target="_blank">DLF</a></span>  Software de dominio proprio da Kontrow utilizado para configuração e teste de equipamentos em bancada.</div>
+      </div><!--texto de introdução sobre movidesk-->
+      <div class="coluna animar-entrada animar-entrada"> <!--coluna que alinha os itens-->
+        <div class="hardware animar-entrada">hardwares</div> <!--subtitulo hardwares na introdução-->
+        <div class="linha-vermelha-bottom-software animar-entrada"></div> <!--linha vermelha abaixo do subtitulo Hardwares-->
+        <div class="passoIntrodução animar-entrada"> <!--txt box cinza-->
+          <p><span><a href="">KDB</a></span>Equipamento principal utilizado para a leitura de eventos da rede CAN e G-sensor veicular possui um conector de 18 pinos destinado à alimentação e à recepção de eventos (CAN e G-sensor), além de um conector de 21 vias voltado para a leitura de sinais da carroceria e do sistema de ar-condicionado. Internamente, o dispositivo conta com um slot para inserção de um chip CAT-M1, utilizado para a comunicação de dados. Na parte traseira da KDB, encontra-se uma etiqueta de licenciamento da ANATEL, a qual exibe o número de identificação (HWID) necessário para localizar o dispositivo no sistema Datalbus e realizar sua devida configuração.</p>
+    </div>
+        <div class="passoIntrodução animar-entrada"> <!--txt box cinza-->
+          <p><span><a href="">SPOKE</a></span>leitor de cartões RFID utilizado para identificação do motorista e liberação da ignição do veículo, tambem serve para feedback visual para eventos e viagens</span></p>
     </div>
 
-    <div class="barra-separadora animar-entrada"></div>
+    <div class="passoIntrodução animar-entrada"> <!--txt box cinza-->
+          <p><span><a href="">Teste De Ignição</a></span>utilizado para realização de teste de liberação de partida, teste sempre precisa ser realizado antes da preparação do envio do material para o cliente</span></p>
+    </div>
 
-    <div class="coluna animar-entrada">
-      <div class="passo passo-1_2 animar-entrada">
-        <p><span>3.3</span> Com um cartão válido que esteja configurado na conta do cliente encoste o cartão no SPOKE para que ele o leia (os leds devem piscar em verde e o SPOKE deve emitir uma confirmação sonora).</p>
+  </div>
+</section>
+
+<main>
+<div class="bloco-producao animar-entrada">
+  <div id="passo1" class="passo1">3. TESTE DE EQUIPAMENTO</div> <!--titulo do passo 1-->
+
+  <div class="conteudo-flex">
+    <p class="subtitulo"><strong>Software Necessários:</strong></p><!--subtitulo passo 1-->
+    <p class="softwares">Datalbus Local Factory / Teste de bancada / KDB / Spoke</p> <!--softwares necessarios passo 1-->
+  </div>
+
+  <div class="linha-vermelha-bottom animar-entrada"></div> <!--linha vermelha embaixo do subtitulo do passo 1-->
+</div></div>
+
+<section class="instrucoes animar-entrada"><!--alinhamento dos passo 1.1 ao 1.4-->
+  <div class="container animar-entrada"> <!--alinhamento dos passo 1.1 ao 1.4-->
+    <div class="coluna animar-entrada"> <!--alinhamento dos passo 1.1 ao 1.4-->
+      <!--texto passo 1.1-->
+      <div class="passo passo-1_1 animar-entrada animar-entrada"> 
+        <p><span>3.1</span>Conecte a KDB no teste de bancada e espere de 30 a 60 segundos para que ela inicie</p>
+      </div> 
+      <!--texto passo 1.3-->
+      <div class="passo passo-1_3 animar-entrada">
+        <p><span>3.3</span>Após ambos os equipamentos iniciarem, ligue o botão do pós chave, e aguarde que o SPOKE fique com os leds vermelhos.</p>
+      </div> 
+  </div>
+      <!--texto passo 1.2-->
+    <div class="coluna animar-entrada animar-entrada">
+      <div class="passo passo-1_2 animar-entrada animar-entrada animar-entrada">
+        <p><span>3.2</span>Conecte um spoke ao teste e aguarde até que ele inicie (o primeiro led ficará piscando lentamente)</p>
+      </div> 
+      <!--passo 1.4-->
+      <div class="passo passo-1_4 animar-entrada animar-entrada">
+        <p><span>3.4</span>Com um cartão válido que esteja configurado na conta do cliente encoste o cartão no SPOKE para que ele leia (os leds devem piscar em verde e o SPOKE deve emitir uma confirmação sonora).</p> 
       </div>
-      <div class="passo passo-1_4 animar-entrada">
-        <p><span>3.4</span> Em casos que a KBD esteja configurada como E5 ou E6 o SPOKE deve sempre ficar com os leds em verde variando na vertical, e no teste físico a luz de partida deve ser acionada enquanto os leds do SPOKE estiverem em verde.</p>
+    </div>
+  </div>
+</section>
+
+<section class="instrucoes animar-entrada"><!--alinhamento dos passo 1.1 ao 1.4-->
+  <div class="container animar-entrada"> <!--alinhamento dos passo 1.1 ao 1.4-->
+    <div class="coluna animar-entrada"> <!--alinhamento dos passo 1.1 ao 1.4-->
+      <!--texto passo 1.1-->
+      <div class="passo passo-1_1 animar-entrada animar-entrada"> 
+        <p><span>3.5</span>Conecte a KDB no teste de bancada e espere de 30 a 60 segundos para que ela inicie</p>
+      </div> 
+  </div>
+      <!--texto passo 1.2-->
+    <div class="coluna animar-entrada animar-entrada">
+</section>
+
+<Section>
+<div class="bloco-producao animar-entrada">
+  <div id="passoOBS" class="passoOBS">OBSERVAÇÕES</div> <!--titulo do passo 1-->
+
+  <div class="container animar-entrada"> <!--alinhamento dos passo 1.1 ao 1.4-->
+    <div class="coluna animar-entrada"> <!--alinhamento dos passo 1.1 ao 1.4-->
+      <!--texto passo 1.1-->
+      <div class="passo passo-1_1 animar-entrada animar-entrada"> 
+        <p><span>1.</span>Em casos que a KBD esteja configurada como E5 ou E6 o SPOKE deve sempre ficar com os leds em verde variando na vertical, e no teste físico a luz de partida deve ser acionada enquanto os leds do SPOKE estiverem em verde.</p>
+      </div> 
+      <!--texto passo 1.3-->
+      <div class="passo passo-1_3 animar-entrada">
+        <p><span>2.</span>Em casos que a KDB esteja configurada como E3 o teste deve funcionar como uma lógica invertida, quando a KDB for conectada ao teste e iniciar a luz de partida acenderá, o SPOKE ficará com os leds vermelhos variando na vertical, assim que for realizada a leitura do cartão, os leds irão ficar verdes e a luz de partida do teste irá se apagar. </p>
+      </div> 
+  </div>
+      <!--texto passo 1.2-->
+    <div class="coluna animar-entrada animar-entrada">
+      <div class="passo passo-1_2 animar-entrada animar-entrada animar-entrada">
+        <p><span>3.</span>Qualquer outra variação no teste que não seja como descrito acima, é recomendado que seja revisado os passos 1.12 e 1.13 no item 1. PRODUÇÃO DE EQUIPAMENTOS.</p>
+      </div> 
+      <!--passo 1.4-->
+      <div class="passo passo-1_4 animar-entrada animar-entrada">
+        <p><span>4.</span>Se todos os passos foram feitos dentro do que está descrito e mesmo assim o funcionamento apresenta diferença, pode existir algum problema físico na KDB ou SPOKE.</p> 
       </div>
     </div>
   </div>
 
-    <div class="container">
-    <div class="coluna animar-entrada">
-      <div class="passo passo-1_1 animar-entrada">
-        <p><span>3.5</span> Em casos que a KDB esteja configurada como E3 o teste deve funcionar como uma lógica invertida, quando a KDB for conectada ao teste e iniciar a luz de partida acenderá, o SPOKE ficará com os leds vermelhos variando na vertical, assim que for realizada a leitura do cartão, os leds irão ficar verdes e a luz de partida do teste irá se apagar</p>
-      </div>
-      <div class="passo passo-1_3 animar-entrada">
-        <p><span>3.6</span> Qualquer outra variação no teste que não seja como descrito acima, é recomendado que seja revisado os passos 1.12 e 1.13 no item 1. PRODUÇÃO DE EQUIPAMENTOS.</p>
-      </div>
-    </div>
-
-    <div class="barra-separadora animar-entrada"></div>
-
-    <div class="coluna animar-entrada">
-      <div class="passo passo-1_2 animar-entrada">
-        <p><span>3.7</span> Se todos os passos foram feitos dentro do que está descrito e mesmo assim o funcionamento apresenta diferença, pode existir algum problema físico na KDB ou SPOKE</p>
-      </div>
-      <div class="passo passo-1_4 animar-entrada">
-        <p><span>3.8</span> Se tudo estiver OK, desligue o pós chave do teste físico e aguarde até que a luz de partida desligue e o SPOKE retorne aos leds vermelhos.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
+</Section>
 
  <script>
   document.addEventListener('DOMContentLoaded', () => {
@@ -219,6 +267,37 @@
   });
 </script>
 
+<script> 
+const video = document.getElementById('video1');
+const zoomArea = document.getElementById('zoomArea');
+let isZoomed = false;
+
+function aplicarZoom() {
+  video.style.transform = 'scale(2)';
+  video.style.transformOrigin = 'top left';
+  video.style.position = 'absolute';  // para sair dos limites originais
+  video.style.zIndex = '9999';
+  isZoomed = true;
+}
+
+function removerZoom() {
+  video.style.transform = 'scale(1)';
+  video.style.position = 'relative';
+  video.style.zIndex = '1';
+  isZoomed = false;
+}
+
+// Clique na área transparente
+zoomArea.addEventListener('click', () => {
+  isZoomed ? removerZoom() : aplicarZoom();
+});
+
+// Clique no vídeo também remove o zoom
+video.addEventListener('click', () => {
+  if (isZoomed) removerZoom();
+});
+</script>
+
 <script>
   const iconeUsuario = document.getElementById("abrir-menu");
   const menu = document.getElementById("menu-opcoes");
@@ -243,6 +322,21 @@
   });
 </script>
 
+<script>function alternarModo() {
+  document.body.classList.toggle("dark-mode");
 
+  // Salvar preferência
+  const modoAtual = document.body.classList.contains("dark-mode") ? "escuro" : "claro";
+  localStorage.setItem("modo-tema", modoAtual);
+}
+
+// Carregar preferência ao abrir o site
+document.addEventListener("DOMContentLoaded", () => {
+  const modoSalvo = localStorage.getItem("modo-tema");
+  if (modoSalvo === "escuro") {
+    document.body.classList.add("dark-mode");
+  }
+});</script>
 </body>
+
 </html>
