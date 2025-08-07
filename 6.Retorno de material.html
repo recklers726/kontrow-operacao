@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script>
+    if (localStorage.getItem("logado") !== "true") {
+      window.location.href = "index.html"; // redireciona pro login
+    }
+  </script>
+
+  <meta charset="UTF-8">
+  <title>Kontrow Operações</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="img/kontrowFavicon.png">
+</head>
+<body>
+<header>
+  <div class="topo">
+   <div class="logo-container">
+  <div class="logo-com-texto">
+    <img class="logo" src="img/Logo1.png" alt="Kontrow Operações">
+    <div class="logo-texto">OPERAÇÕES</div>
+      <div class="menu-usuario">
+    <img src="img/icons8-usuário-30.png" alt="Usuario" class="icone-usuario" id="abrir-menu">
+    <div class="abaixarMenu" id="menu-opcoes">
+                  <label class="toggle-switch">
+  <input type="checkbox" id="darkModeToggle" />
+  <div class="slider">
+ <img src="img/sun.png" class="icon sun" alt="Modo claro">
+    <img src="img/night-mode.png" class="icon moon" alt="Modo escuro">
+    <div class="circle"></div>
+  </div>
+</label>
+            <a href="settings.html">configurações</a>
+            <a href="index.html" id="sair">Sair</a>
+  </div></div>
+  </div>  <img class="engr1" src="img/operacao_branca.png" alt="Engrenagem 1">
+  <img class="engr2" src="img/operacao_branca.png" alt="Engrenagem 2">
+</div>
+  </div> 
+</header>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const botaoMenu = document.getElementById("abrir-menu");
+    const menu = document.getElementById("menu-opcoes");
+
+    botaoMenu.addEventListener("click", () => {
+      menu.classList.toggle("ativo");
+    });
+
+    // Fechar se clicar fora
+    document.addEventListener("click", (e) => {
+      if (!menu.contains(e.target) && !botaoMenu.contains(e.target)) {
+        menu.classList.remove("ativo");
+      }
+    });
+  });</script>
+  
+  
+<div class="bloco-producao animar-entrada">
+  <div id="passo2" class="passo2">6. RETORNO DE MATERIAL</div>
+  <div class="linha-vermelha-bottom-introdução-up animar-entrada"></div>
+  <div class="conteudo-flex">
+  </div>
+</div>
+<section class="instrucoes-KDB animar-entrada" style="display: flex; justify-content: center; align-items: center; height: 100vh; flex-direction: column;">
+  <div class="container animar-entrada" style="text-align: center; max-width: 800px; margin-top: 40px;">
+    <div class="coluna-KDB animar-entrada">
+      <div class="software animar-entrada" style="font-size: 2rem; font-weight: bold;">Softwares</div>
+      <div class="linha-vermelha-bottom-software animar-entrada" style="height: 4px; background-color: red; width: 420px; margin: 10px auto;"></div>
+      
+      <div class="passoIntrodução-hardware animar-entrada" style="background-color: #f2f2f2; padding: 20px; border-radius: 8px;">
+        <p>
+          <span>
+            <a href="https://kontrow.movidesk.com/" target="_blank">CONTA AZUL</a>
+          </span> é uma planilha em Excel desenvolvida pela equipe de operações da Kontrow para minimizar a quantidade de erros possíveis durante a separação de material.
+        </p>
+      </div>
+      <div class="passoIntrodução-hardware animar-entrada" style="background-color: #f2f2f2; padding: 20px; border-radius: 8px; margin-top: 20px;">
+    <p>
+      <span>
+        <a href="https://kontrow.movidesk.com/" target="_blank">Checklist de material</a>
+      </span> é uma planilha em Excel desenvolvida pela equipe de operações da Kontrow para minimizar a quantidade de erros possíveis durante a separação de material.
+    </p>
+  </div>
+</div>
+  </div>
+</section>
+
+<main>
+<div class="bloco-producao animar-entrada">
+  <div id="passo1" class="passo1">6. RETORNO DE MATERIAL</div> <!--titulo do passo 1-->
+
+  <div class="conteudo-flex">
+    <p class="subtitulo"><strong>Software Necessários:</strong></p><!--subtitulo passo 1-->
+    <p class="softwares">Checklist de material / Conta azul</p> <!--softwares necessarios passo 1-->
+  </div>
+
+  <div class="linha-vermelha-bottom animar-entrada"></div> <!--linha vermelha embaixo do subtitulo do passo 1-->
+</div></div>
+
+<section class="instrucoes">
+<div class="container">
+
+  <!-- Passo 1.5 -->
+  <div class="coluna animar-entrada">
+    <p><span>6.1</span>para dar inicio pegue a checklist de material que voce utilizou para dar saída no item 4: "Preparação de material para envio cliente"</p>
+    <div class="video-box animar-entrada">
+ <video id="video1" width="650" height="360" controls>
+      <source src="videos/videos-1.0/1.5.mp4" type="video/mp4">
+    </video>
+    <div class="zoom-area" id="zoomArea"></div>
+  </div>
+</div>
+
+    <div class="barra-separadora animar-entrada"></div>
+
+  <!-- Passo 1.6 -->
+  <div class="coluna animar-entrada" id="video2">
+    <p><span>6.2</span>faça conferencia de todos os materiais que voltaram (KDB, spoke e chicotes) e anote na parte de retorno da checklist a quantidade de material novo e material/equipamentos que foram trocados pelo técnico.</p>
+    <div class="video-box animar-entrada">
+      <video controls>
+        <source src="videos/videos-1.0/1.6.mp4" type="video/mp4">
+        Seu navegador não suporta o vídeo.
+      </video>
+    </div>
+  </div>
+
+</div>
+  <div class="container">
+  <div class="coluna animar-entrada" id="video3">
+    <p><span>6.3</span>preencha os campos inferiores da checklist "entrada" marcando de acordo com cada item.</p>
+    <div class="video-box animar-entrada">
+      <video controls>
+        <source src="videos/videos-1.0/1.7.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+    <div class="barra-separadora animar-entrada"></div>
+
+<div class="coluna animar-entrada" id="video4">
+  <p><span>6.4</span>Utilize o AUVO para dar baixa nos chicotes e o retorno de KDB, SPOKE e Chicotes. (tooltip auvo como dar baixa em KDB e fazer orçamento de chicotes)</p>
+
+  <div class="video-box animar-entrada">
+    <img src="videos/videos-1.0/1.8.png" alt="video18" class="video1-8 zoom-img">
+  </div>
+</div>
+</div>
+</div>
+  <div class="container" id="video5">
+  <div class="coluna animar-entrada">
+    <p><span>6.5</span></span>
+          </span></p>
+    <div class="video-box animar-entrada">
+      <video controls>
+        <source src="videos/videos-1.0/1.9.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+    <div class="barra-separadora animar-entrada"></div>
+
+  <div class="coluna animar-entrada" id="video6">
+    <p><span>6.6</span>anote o numero de HWID da KDB, acesse o Datalbus e na tela clientes, procure pelo cliente para o qual os equipamentos retornaram</p>
+    <div class="video-box animar-entrada">
+      <video controls>
+        <source src="videos/videos-1.0/1.10.mp4" type="video/mp4">
+        Seu navegador não suporta o vídeo.
+      </video>
+    </div>
+  </div> 
+</div>
+  <div class="container">
+  <div class="coluna animar-entrada" id="video7">
+    <p><span>6.7</span>no menu operações no canto esquerdo, clique equipamentos e na barra de pesquisa "N° Equip." procure pelo numero de HWID da KDB que voce selecionou, e verifique se a KDB tem todos os seus "progresso Comandos" finalizados. (colocar algo aqui se não tiver)</p>
+    <div class="video-box animar-entrada">
+      <video controls>
+        <source src="videos/videos-1.0/1.11.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+    <div class="barra-separadora animar-entrada"></div>
+
+  <div class="coluna animar-entrada" id="video8">
+    <p><span>6.8</span></p>
+    <div class="video-box animar-entrada">
+      <video controls>
+        <source src="videos/videos-1.0/1.12.mp4" type="video/mp4">
+        Seu navegador não suporta o vídeo.
+      </video>
+    </div>
+  </div> 
+</div>
+
+  <div class="container" id="video9">
+  <div class="coluna animar-entrada">
+    <p><span>6.9</span>volte para o menu de operação no canto esquerdo e clique em ativos e na barra de pesquisa "grupo" pesquisa por "desativados" e procure o carro que tenha o fabricante "kontrow"
+    <div class="video-box animar-entrada">
+      <video controls>
+        <source src="videos/videos-1.0/1.13.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+    <div class="barra-separadora animar-entrada"></div>
+
+  <div class="coluna animar-entrada" id="video10">
+    <p><span>6.10</span>selecione o ativo com descrito no passo anterior e no canto superior esquerdo, clique em Ações e depois em instalar equipamento e em Devices disponiveis procure pelo numero de HWID da KDB que deseja remover da conta</p>
+    <div class="video-box animar-entrada">
+      <video controls>
+        <source src="videos/videos-1.0/1.14.mp4" type="video/mp4">
+        Seu navegador não suporta o vídeo.
+      </video>
+    </div>
+  </div> 
+  
+</div>
+
+  <div class="container" id="video9">
+  <div class="coluna animar-entrada">
+    <p><span>6.11</span>selecione novamente o ativo clique novamente em ações e logo em seguida clique em "Desinstalar Equipamento" <div class="video-box animar-entrada">
+      <video controls>
+        <source src="videos/videos-1.0/1.13.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+    <div class="barra-separadora animar-entrada"></div>
+
+  <div class="coluna animar-entrada" id="video10">
+    <p><span>6.12</span>selecione o ativo com descrito no passo anterior e no canto superior esquerdo, clique em Ações e depois em instalar equipamento e em Devices disponiveis procure pelo numero de HWID da KDB que deseja remover da conta e quando aparecer o aviso: "Deseja reutilizar o equipamento desinstalado no mesmo cliente?". clique em "Não"</p>
+    <div class="video-box animar-entrada">
+      <video controls>
+        <source src="videos/videos-1.0/1.14.mp4" type="video/mp4">
+        Seu navegador não suporta o vídeo.
+      </video>
+    </div>
+  </div> 
+  
+</div>
+
+  <div class="container" id="video9">
+  <div class="coluna animar-entrada">
+    <p><span>6.13</span>volte para a tela de equipamentos e aguarde que a KDB que foi removida da conta termine de carregar todos os comandos e desapareça da tela de equipamentos.<div class="video-box animar-entrada">
+      <video controls>
+        <source src="videos/videos-1.0/1.13.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+    <div class="barra-separadora animar-entrada"></div>
+
+  <div class="coluna animar-entrada" id="video10">
+    <p><span>6.14</span>no conta azul faça NF de retorno do material para o mesmo cliente do qual foi emitido a NF de saída. (saiba como fazer NF de entrada clicando aqui)</p>
+    <div class="video-box animar-entrada">
+      <video controls>
+        <source src="videos/videos-1.0/1.14.mp4" type="video/mp4">
+        Seu navegador não suporta o vídeo.
+      </video>
+    </div>
+  </div> 
+  
+</div>
+</section>
+
+ <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const botoes = document.querySelectorAll('.botao, .botao2, .botao3, .botao4, .botao5, .botao6');
+
+    botoes.forEach(botao => {
+      const etapa = botao.closest('.etapa');
+
+      botao.addEventListener('mouseenter', () => {
+        etapa.classList.add('hover-etapa');
+      });
+
+      botao.addEventListener('mouseleave', () => {
+        etapa.classList.remove('hover-etapa');
+      });
+    });
+  });
+</script>
+
+<button id="btn-imprimir" onclick="window.print()">🖨️</button>
+
+<button id="btn-topo" title="Voltar ao topo">↑</button>
+
+
+<script>
+  const btnTopo = document.getElementById("btn-topo");
+  const btnPrint = document.getElementById("btn-imprimir");
+
+  // Mostrar o botão quando o usuário rolar a página
+  window.onscroll = function () {
+    const scrollY = document.body.scrollTop || document.documentElement.scrollTop;
+
+        btnPrint.style.display = scrollY > 200 ? "block" : "none";
+         btnTopo.style.display = scrollY > 200 ? "block" : "none";
+  };
+
+  // Ao clicar no botão, rolar suavemente para o topo e aplicar a animação
+  btnTopo.addEventListener("click", () => {
+    // Adiciona classe de animação
+    btnTopo.classList.add("botao-animado");
+
+    // Rolagem suave para o topo
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+    // Remove a classe após a duração da animação
+    setTimeout(() => {
+      btnTopo.classList.remove("botao-animado");
+    }, 300); // deve coincidir com o tempo da animação CSS
+  });
+</script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const elementos = document.querySelectorAll('.animar-entrada');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('aparecer');
+          observer.unobserve(entry.target); // para de observar após a animação
+        }
+      });
+    }, {
+      threshold: 0.5 // só ativa quando 50% do elemento estiver visível
+    });
+
+    elementos.forEach(el => observer.observe(el));
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const img = document.querySelector(".zoom-img");
+
+    img.addEventListener("click", function () {
+      this.classList.toggle("zoomed");
+
+      // Ao sair do zoom, reseta transform
+      if (!this.classList.contains("zoomed")) {
+        this.style.transformOrigin = "center center";
+        this.style.transform = "";
+      }
+    });
+
+    img.addEventListener("mousemove", function (e) {
+      if (!this.classList.contains("zoomed")) return;
+
+      const { left, top, width, height } = this.getBoundingClientRect();
+      const x = ((e.clientX - left) / width) * 100;
+      const y = ((e.clientY - top) / height) * 100;
+
+      this.style.transformOrigin = `${x}% ${y}%`;
+    });
+  });
+</script>
+
+<script> 
+const video = document.getElementById('video1');
+const zoomArea = document.getElementById('zoomArea');
+let isZoomed = false;
+
+function aplicarZoom() {
+  video.style.transform = 'scale(2)';
+  video.style.transformOrigin = 'top left';
+  video.style.position = 'absolute';  // para sair dos limites originais
+  video.style.zIndex = '9999';
+  isZoomed = true;
+}
+
+function removerZoom() {
+  video.style.transform = 'scale(1)';
+  video.style.position = 'relative';
+  video.style.zIndex = '1';
+  isZoomed = false;
+}
+
+// Clique na área transparente
+zoomArea.addEventListener('click', () => {
+  isZoomed ? removerZoom() : aplicarZoom();
+});
+
+// Clique no vídeo também remove o zoom
+video.addEventListener('click', () => {
+  if (isZoomed) removerZoom();
+});
+</script>
+
+<script>
+  const iconeUsuario = document.getElementById("abrir-menu");
+  const menu = document.getElementById("menu-opcoes");
+  const botaoSair = document.getElementById("sair");
+
+  iconeUsuario.addEventListener("click", () => {
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+  });
+
+  // Fechar o menu se clicar fora
+  document.addEventListener("click", function (event) {
+    if (!event.target.closest(".menu-usuario")) {
+      menu.style.display = "none";
+    }
+  });
+
+  // Lógica de sair
+  botaoSair.addEventListener("click", (e) => {
+    e.preventDefault();
+    localStorage.removeItem("logado");
+    window.location.href = "index.html";
+  });
+</script>
+
+<script>function alternarModo() {
+  document.body.classList.toggle("dark-mode");
+
+  // Salvar preferência
+  const modoAtual = document.body.classList.contains("dark-mode") ? "escuro" : "claro";
+  localStorage.setItem("modo-tema", modoAtual);
+}
+
+// Carregar preferência ao abrir o site
+document.addEventListener("DOMContentLoaded", () => {
+  const modoSalvo = localStorage.getItem("modo-tema");
+  if (modoSalvo === "escuro") {
+    document.body.classList.add("dark-mode");
+  }
+});</script>
+</body>
+
+</html>
