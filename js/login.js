@@ -9,8 +9,8 @@ const credenciais = [
     senha: "968539183" },
   { email: "david.bandeira@kontrow.com.br",
     senha: "970717341" },
-  { email: "gilberto.rodrigues@kontrow.com.br",
-     senha: "967745830",},
+  { email: "milton.shiro@kontrow.com.br",
+     senha: "1234",},
   { email: "assaf@kontrow.com.br",
      senha: "999082266",}
 ];
